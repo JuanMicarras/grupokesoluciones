@@ -1,5 +1,15 @@
 import Navbar from "./components/Navbar";
+import Image from "next/image";
 
+
+const CONTACTS_LINKS = {
+  whatsapp: 
+  {
+    label: "WhatsApp",
+    value: "+57 300 644 7179",
+    url: "https://api.whatsapp.com/send?phone=573006447179&text=Vengo%20desde%20el%20website",
+  }
+}
 
 export default function Home() {
   return (
@@ -8,69 +18,317 @@ export default function Home() {
 
 
       <header id="top" className="hero">
-        <div className="container heroInner">
-          <div className="heroText">
-            <p className="kicker">Grupo KeSoluciones</p>
-            <h1>Mantenimiento y soluciones para plantas eléctricas</h1>
-            <p className="lead">
-              Especialistas en mantenimiento, montaje y venta de repuestos para sistemas de
-              generación eléctrica en Colombia.
-            </p>
+  <div className="container heroInner">
+    <div className="heroText">
+      <p className="kicker">Grupo KeSoluciones</p>
+      <h1>Mantenimiento y soluciones para plantas eléctricas</h1>
 
-            <div className="ctaRow">
-              <a className="btnPrimary" href="#contacto">Cotiza por WhatsApp</a>
-              <a className="btnGhost" href="#servicios">Ver servicios</a>
-            </div>
-          </div>
+      <p className="lead">
+        Especialistas en mantenimiento, montaje y venta de repuestos para sistemas de
+        generación eléctrica en Colombia.
+      </p>
 
-          <div className="heroCard" aria-label="Marca">
-            <img className="logoImg" src="/img/Logo_principal.png" alt="Grupo KeSoluciones" />
+      {/* ✅ Párrafo SEO (debajo del lead y antes de los CTAs) */}
+      <p className="seoText">
+        Brindamos mantenimiento preventivo y correctivo, montaje y puesta en marcha,
+        contratos de mantenimiento, ATS, subestaciones y sincronismo para plantas eléctricas
+        y grupos electrógenos.
+      </p>
 
-            <p className="heroCardText">
-              Continuidad operativa, atención técnica confiable y soluciones a la medida.
-            </p>
-          </div>
-        </div>
-      </header>
+      {/* ✅ SEO local (Costa Caribe) */}
+      <p className="seoText seoLocal">
+        Atención en la Costa Caribe: Barranquilla, Cartagena, Santa Marta, Valledupar,
+        Sincelejo, Montería y ciudades cercanas.
+      </p>
+
+      <div className="ctaRow">
+        {/* ideal: que abra WhatsApp */}
+        <a  className="btnPrimary"
+        href="https://wa.me/573177788997?text=Hola,%20quisiera%20cotizar%20servicios/repuestos."
+        target="_blank"
+        rel="noreferrer">
+          Cotiza por WhatsApp
+        </a>
+
+        <a className="btnGhost" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+
+    <div className="heroCard" aria-label="Marca">
+      <img className="logoImg" src="/img/Logo_principal.png" alt="Grupo KeSoluciones" />
+      <p className="heroCardText">
+        Continuidad operativa, atención técnica confiable y soluciones a la medida.
+      </p>
+    </div>
+  </div>
+</header>
+
 
       <main>
-        <section id="servicios" className="section">
-          <div className="container">
-            <div className="sectionHeader">
-              <h2>Nuestros servicios</h2>
-              <p>
-                Soluciones integrales para garantizar continuidad y confiabilidad en sus equipos.
-              </p>
-            </div>
-
-            <div className="grid2">
-              <article className="card">
-                <h3>Servicios de Plantas Eléctricas</h3>
-                <ul>
-                  <li>Venta e instalación de plantas eléctricas</li>
-                  <li>Montaje y puesta en marcha</li>
-                  <li>Mantenimiento preventivo y correctivo</li>
-                  <li>Contratos de mantenimiento a la medida</li>
-                  <li>Venta de insumos y repuestos originales</li>
-                </ul>
-              </article>
-
-              <article className="card">
-                <h3>Servicios Eléctricos Especializados</h3>
-                <ul>
-                  <li>Sistemas de sincronismo para múltiples generadores</li>
-                  <li>Transferencias automáticas (ATS)</li>
-                  <li>Acometidas eléctricas: suministro e instalación segura</li>
-                  <li>Mantenimiento de subestaciones eléctricas</li>
-                </ul>
-              </article>
-            </div>
-
-            <div className="centerRow">
-              <a className="btnDark" href="#contacto">Solicitar cotización</a>
-            </div>
-          </div>
+        <section className="section">
         </section>
+        <section id="servicios" className="section">
+  <div className="container">
+    <div className="sectionHeader">
+      <h2>Servicios</h2>
+      <p>Soluciones integrales para plantas eléctricas, instalación y soporte.</p>
+    </div>
+
+    {/* ✅ Servicios principales */}
+<div className="grid3">
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/"
+        alt="Venta de plantas eléctricas"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Venta de plantas eléctricas</h3>
+    <p>Suministro de equipos según su necesidad y presupuesto.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/Montaje planta electrica.jpeg"
+        alt="Montaje y puesta en marcha"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Montaje y puesta en marcha</h3>
+    <p>Instalación, pruebas y arranque seguro de su planta eléctrica.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/Mantenimiento correctivo.jpeg"
+        alt="Mantenimiento preventivo"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Mantenimiento preventivo</h3>
+    <p>Rutinas programadas para evitar fallas y prolongar vida útil.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/Diagnostico de fallas.jpeg"
+        alt="Mantenimiento correctivo"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Mantenimiento correctivo</h3>
+    <p>Diagnóstico y reparación para restablecer operación confiable.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/Contratos de mantenimiento.jpeg"
+        alt="Contratos de mantenimiento"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Contratos de mantenimiento</h3>
+    <p>Planes mensuales o anuales con atención prioritaria y control.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/Repuestos originales.jpeg"
+        alt="Venta de insumos y repuestos originales"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Venta de insumos y repuestos originales</h3>
+    <p>Repuestos confiables para mantener el desempeño del equipo.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/"
+        alt="Transferencias automáticas (ATS)"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Transferencias automáticas (ATS)</h3>
+    <p>Automatización para respaldo eléctrico rápido y seguro.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/Acometidas electricas.jpeg"
+        alt="Acometidas eléctricas: suministro e instalación segura"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Acometidas eléctricas</h3>
+    <p>Suministro e instalación segura conforme a normas.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/Mantenimiento a subestaciones.jpeg"
+        alt="Mantenimiento de subestaciones eléctricas"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Mantenimiento de subestaciones eléctricas</h3>
+    <p>Inspección, pruebas y mantenimiento para operación estable.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/Sincronismo generadores.jpeg"
+        alt="Sistemas de sincronismo para múltiples generadores"
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Sistemas de sincronismo</h3>
+    <p>Sincronización de múltiples generadores para cargas mayores.</p>
+  </article>
+</div>
+
+
+    {/* ✅ Sub-sección: Servicios Complementarios */}
+    <div className="subSection">
+      <h3 className="subTitle">Servicios Complementarios</h3>
+
+      <div className="grid3">
+        <article className="card">
+          <div className="cardImg">
+            <Image
+              src="/img/services/insonorizacion.jpg"
+              alt="Insonorización de plantas y cuartos eléctricos"
+              width={800}
+              height={500}
+            />
+          </div>
+          <h4>Insonorización de plantas y cuartos eléctricos</h4>
+          <p>Reducción de ruido con soluciones profesionales.</p>
+        </article>
+
+        <article className="card">
+          <div className="cardImg">
+            <Image
+              src="/img/Montaje tuberia de escape.jpeg"
+              alt="Suministro e instalación de ductos y tuberías de escape"
+              width={800}
+              height={500}
+            />
+          </div>
+          <h4>Suministro e instalación de ductos y tuberías de escape</h4>
+          <p>Sistemas diseñados para cumplir normas ambientales y de seguridad.</p>
+        </article>
+
+        <article className="card">
+          <div className="cardImg">
+            <Image
+              src="/img/services/combustible.jpg"
+              alt="Tanques y sistemas de combustible"
+              width={800}
+              height={500}
+            />
+          </div>
+          <h4>Tanques y sistemas de combustible</h4>
+          <p>Instalación de tanques, tuberías de llenado y spill containers.</p>
+        </article>
+      </div>
+    </div>
+
+    {/* ✅ Sub-sección: Servicios de Consultoría */}
+    <div className="subSection">
+      <h3 className="subTitle">Servicios de Consultoría</h3>
+
+      <div className="grid3">
+        <article className="card">
+          <div className="cardImg">
+            <Image
+              src="/img/services/asesoria.jpg"
+              alt="Asesoría técnica especializada"
+              width={800}
+              height={500}
+            />
+          </div>
+          <h4>Asesoría técnica especializada</h4>
+          <p>Definimos la capacidad adecuada de su planta y la óptima ubicación del equipo.</p>
+        </article>
+
+        <article className="card">
+          <div className="cardImg">
+            <Image
+              src="/img/services/capacitacion.jpg"
+              alt="Capacitación a su personal"
+              width={800}
+              height={500}
+            />
+          </div>
+          <h4>Capacitación a su personal</h4>
+          <p>
+            Entrenamos a su equipo en operación básica, seguridad y primeros diagnósticos,
+            asegurando un uso correcto y confiable de los plantas eléctricas.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="marcas" className="section sectionAlt">
+  <div className="container">
+    <div className="sectionHeader">
+      <h2>Marcas que atendemos</h2>
+      <p>
+        Contamos con experiencia técnica para atender equipos y componentes de
+        las principales marcas del mercado.
+      </p>
+    </div>
+
+    <div className="brandsGrid">
+      {[
+        "cummins",
+        "perkins",
+        "cat",
+        "Doosan",
+        "jhondeere",
+        "generac",
+        "kohler",
+        "Leroy",
+        "Stamford",
+        "Marathon",
+        "Deepsea",
+        "ComAp",
+      ].map((brand) => (
+        <div key={brand} className="brandItem">
+          <Image
+            src={`/img/marcas/${brand}.png`}
+            alt={`Marca ${brand}`}
+            width={300}
+            height={120}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section id="porque" className="section sectionDark">
           <div className="container">
@@ -107,6 +365,40 @@ export default function Home() {
           </div>
         </section>
 
+      <section id="clientes" className="section">
+  <div className="container">
+    <div className="sectionHeader">
+      <h2>Clientes que confían en nosotros</h2>
+      <p>
+        Hemos acompañado a empresas de distintos sectores con soluciones confiables
+        y a la medida.
+      </p>
+    </div>
+
+    <div className="clientsGrid">
+      {[
+        "juliao",
+        "country",
+        "clinica",
+        "green",
+        "jimenez",
+        "porto rosso",
+        "bruxxel",
+        "clubtower",
+      ].map((client) => (
+        <div key={client} className="clientItem">
+          <Image
+            src={`/img/clientes/${client}.png`}
+            alt={`Cliente ${client}`}
+            width={300}
+            height={140}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
         <section id="contacto" className="section">
           <div className="container">
             <div className="sectionHeader">
@@ -124,7 +416,7 @@ export default function Home() {
               </div>
               <div className="infoCard">
                 <p className="label">WhatsApp</p>
-                <p className="value">+57 300 644 7179</p>
+                <p className="value">+57 317 778 8997</p>
               </div>
               <div className="infoCard">
                 <p className="label">Correo</p>
@@ -133,8 +425,7 @@ export default function Home() {
             </div>
 
             <div className="centerRow">
-              {/* Cambia el número: 57 + número sin espacios */}
-              <a className="btnDark" href="https://wa.me/573006447179" target="_blank" rel="noreferrer">
+              <a className="btnDark" href={CONTACTS_LINKS.whatsapp.url} target="_blank" rel="noreferrer">
                 Escríbenos por WhatsApp
               </a>
             </div>

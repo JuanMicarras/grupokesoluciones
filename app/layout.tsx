@@ -14,11 +14,38 @@ const geistMono = Geist_Mono({
 
 
 
-export const metadata: Metadata = {
-  title: "Grupo KeSoluciones | Mantenimiento de plantas eléctricas",
+export const metadata = {
+  title: "Grupo KeSoluciones | Plantas eléctricas, mantenimiento y consultoría",
   description:
-    "Mantenimiento, montaje y venta de repuestos para plantas eléctricas. Servicios eléctricos especializados y atención técnica confiable en Colombia.",
+    "Especialistas en venta, instalación, mantenimiento y consultoría de plantas eléctricas. Servicios industriales, comerciales y residenciales.",
+  keywords: [
+    "plantas eléctricas",
+    "mantenimiento de plantas eléctricas",
+    "grupos electrógenos",
+    "instalación de plantas eléctricas",
+    "ATS",
+    "subestaciones eléctricas",
+    "servicios eléctricos industriales",
+  ],
+  openGraph: {
+    title: "Grupo KeSoluciones",
+    description:
+      "Soluciones integrales en plantas eléctricas, mantenimiento y consultoría especializada.",
+    url: "https://grupokesoluciones.com",
+    siteName: "Grupo KeSoluciones",
+    images: [
+      {
+        url: "/img/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Grupo KeSoluciones",
+      },
+    ],
+    locale: "es_CO",
+    type: "website",
+  },
 };
+
 
 
 export default function RootLayout({
