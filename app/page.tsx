@@ -79,7 +79,7 @@ export default function Home() {
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/"
+        src="/img/servicios/planta.jpeg"
         alt="Venta de plantas eléctricas"
         width={800}
         height={500}
@@ -92,7 +92,7 @@ export default function Home() {
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/Montaje planta electrica.jpeg"
+        src="/img/servicios/montaje_planta.jpeg"
         alt="Montaje y puesta en marcha"
         width={800}
         height={500}
@@ -105,7 +105,7 @@ export default function Home() {
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/Mantenimiento correctivo.jpeg"
+        src="/img/servicios/preventivo.jpeg"
         alt="Mantenimiento preventivo"
         width={800}
         height={500}
@@ -118,7 +118,7 @@ export default function Home() {
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/Diagnostico de fallas.jpeg"
+        src="/img/servicios/correctivo.jpeg"
         alt="Mantenimiento correctivo"
         width={800}
         height={500}
@@ -131,7 +131,7 @@ export default function Home() {
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/Contratos de mantenimiento.jpeg"
+        src="/img/servicios/mantenimiento.jpeg"
         alt="Contratos de mantenimiento"
         width={800}
         height={500}
@@ -140,24 +140,36 @@ export default function Home() {
     <h3>Contratos de mantenimiento</h3>
     <p>Planes mensuales o anuales con atención prioritaria y control.</p>
   </article>
-
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/Repuestos originales.jpeg"
-        alt="Venta de insumos y repuestos originales"
+        src="/img/servicios/filtros.jpeg"
+        alt="Venta de insumos"
         width={800}
         height={500}
       />
     </div>
-    <h3>Venta de insumos y repuestos originales</h3>
+    <h3>Venta de insumos </h3>
+    <p>De acuerdo a cada marca y modelo.</p>
+  </article>
+
+  <article className="card">
+    <div className="cardImg">
+      <Image
+        src="/img/servicios/repuestos.jpeg"
+        alt="Venta de repuestos "
+        width={800}
+        height={500}
+      />
+    </div>
+    <h3>Venta de repuestos</h3>
     <p>Repuestos confiables para mantener el desempeño del equipo.</p>
   </article>
 
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/"
+        src="/img/servicios/transferencia.jpg"
         alt="Transferencias automáticas (ATS)"
         width={800}
         height={500}
@@ -170,7 +182,7 @@ export default function Home() {
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/Acometidas electricas.jpeg"
+        src="/img/servicios/acometida.jpeg"
         alt="Acometidas eléctricas: suministro e instalación segura"
         width={800}
         height={500}
@@ -183,7 +195,7 @@ export default function Home() {
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/Mantenimiento a subestaciones.jpeg"
+        src="/img/servicios/subestacion.jpeg"
         alt="Mantenimiento de subestaciones eléctricas"
         width={800}
         height={500}
@@ -196,7 +208,7 @@ export default function Home() {
   <article className="card">
     <div className="cardImg">
       <Image
-        src="/img/Sincronismo generadores.jpeg"
+        src="/img/servicios/sincronismo.png"
         alt="Sistemas de sincronismo para múltiples generadores"
         width={800}
         height={500}
@@ -216,7 +228,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/services/insonorizacion.jpg"
+              src="/img/Servicios/insonorizacion.jpeg"
               alt="Insonorización de plantas y cuartos eléctricos"
               width={800}
               height={500}
@@ -229,7 +241,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/Montaje tuberia de escape.jpeg"
+              src="/img/Servicios/tuberia_escape.jpeg"
               alt="Suministro e instalación de ductos y tuberías de escape"
               width={800}
               height={500}
@@ -242,7 +254,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/services/combustible.jpg"
+              src="/img/Servicios/tanque1.png"
               alt="Tanques y sistemas de combustible"
               width={800}
               height={500}
@@ -262,7 +274,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/services/asesoria.jpg"
+              src="/img/Servicios/Asesoria.jpg"
               alt="Asesoría técnica especializada"
               width={800}
               height={500}
@@ -275,7 +287,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/services/capacitacion.jpg"
+              src="/img/Servicios/capacitacion.png"
               alt="Capacitación a su personal"
               width={800}
               height={500}

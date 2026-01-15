@@ -26,24 +26,27 @@ export const metadata = {
     "ATS",
     "subestaciones eléctricas",
     "servicios eléctricos industriales",
+    "repuestos para plantas eléctricas",
+    "Acometidas eléctricas",
+    "Sensores"
   ],
-  openGraph: {
-    title: "Grupo KeSoluciones",
-    description:
-      "Soluciones integrales en plantas eléctricas, mantenimiento y consultoría especializada.",
-    url: "https://grupokesoluciones.com",
-    siteName: "Grupo KeSoluciones",
-    images: [
-      {
-        url: "/img/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Grupo KeSoluciones",
-      },
-    ],
-    locale: "es_CO",
-    type: "website",
-  },
+  // openGraph: {
+  //   title: "Grupo KeSoluciones",
+  //   description:
+  //     "Soluciones integrales en plantas eléctricas, mantenimiento y consultoría especializada.",
+  //   url: "https://grupokesoluciones.com",
+  //   siteName: "Grupo KeSoluciones",
+  //   images: [
+  //     {
+  //       url: "/img/og-image.jpg",
+  //       width: 1200,
+  //       height: 630,
+  //       alt: "Grupo KeSoluciones",
+  //     },
+  //   ],
+  //   locale: "es_CO",
+  //   type: "website",
+  // },
 };
 
 
