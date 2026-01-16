@@ -6,8 +6,8 @@ const CONTACTS_LINKS = {
   whatsapp: 
   {
     label: "WhatsApp",
-    value: "+57 300 644 7179",
-    url: "https://api.whatsapp.com/send?phone=573006447179&text=Vengo%20desde%20el%20website",
+    value: "+57 317 778 8997",
+    url: "https://api.whatsapp.com/send?phone=573177788997&text=Vengo%20desde%20el%20website",
   }
 }
 
@@ -150,7 +150,7 @@ export default function Home() {
       />
     </div>
     <h3>Venta de insumos </h3>
-    <p>De acuerdo a cada marca y modelo.</p>
+    <p>Suministro de aceites y filtros compatibles con la marca y modelo del equipo.</p>
   </article>
 
   <article className="card">
@@ -228,7 +228,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/Servicios/insonorizacion.jpeg"
+              src="/img/servicios/insonorizacion.jpeg"
               alt="Insonorización de plantas y cuartos eléctricos"
               width={800}
               height={500}
@@ -241,7 +241,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/Servicios/tuberia_escape.jpeg"
+              src="/img/servicios/tuberia_escape.jpeg"
               alt="Suministro e instalación de ductos y tuberías de escape"
               width={800}
               height={500}
@@ -254,7 +254,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/Servicios/tanque1.png"
+              src="/img/servicios/tanque1.png"
               alt="Tanques y sistemas de combustible"
               width={800}
               height={500}
@@ -274,7 +274,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/Servicios/Asesoria.jpg"
+              src="/img/servicios/Asesoria.jpg"
               alt="Asesoría técnica especializada"
               width={800}
               height={500}
@@ -287,7 +287,7 @@ export default function Home() {
         <article className="card">
           <div className="cardImg">
             <Image
-              src="/img/Servicios/capacitacion.png"
+              src="/img/servicios/capacitacion.png"
               alt="Capacitación a su personal"
               width={800}
               height={500}
@@ -296,7 +296,7 @@ export default function Home() {
           <h4>Capacitación a su personal</h4>
           <p>
             Entrenamos a su equipo en operación básica, seguridad y primeros diagnósticos,
-            asegurando un uso correcto y confiable de los plantas eléctricas.
+            asegurando un uso correcto y confiable de las plantas eléctricas.
           </p>
         </article>
       </div>
