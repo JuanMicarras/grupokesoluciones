@@ -3,11 +3,11 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 
 interface Props {
-  options?: 'marcas' | 'clientes';
+  options?: 'brands' | 'clients';
   images?: string[];
 }
 
-export default function BrandsMarquee({options = 'marcas', images = BRANDS}: Readonly<Props>) {
+export default function BrandsMarquee({options = 'brands', images = BRANDS}: Readonly<Props>) {
   const loop = [...images, ...images];
 
   return (

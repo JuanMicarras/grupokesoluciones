@@ -417,7 +417,7 @@ export default function Home() {
               </p>
             </div>
 
-            <Marcas images={CLIENTS} options="clientes" />
+            <Marcas images={CLIENTS} options="clients" />
 
             {/* <div className="clientsGrid">
               {[
