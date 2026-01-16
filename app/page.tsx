@@ -14,25 +14,18 @@ export default function Home() {
         <div className="container heroInner">
           <div className="heroText">
             <p className="kicker">Grupo KeSoluciones</p>
-            <h1>Mantenimiento y soluciones para plantas eléctricas</h1>
+            <h1>Mantenimiento de plantas eléctricas 24/7 para empresas y propiedad horizontal</h1>
 
             <p className="lead">
-              Especialistas en mantenimiento, montaje y venta de repuestos para
-              sistemas de generación eléctrica en Colombia.
+            Mantenimiento preventivo y correctivo, diagnóstico y reparación de plantas eléctricas.
+Venta de repuestos y soporte técnico especializado.
             </p>
 
-            {/* ✅ Párrafo SEO (debajo del lead y antes de los CTAs) */}
             <p className="seoText">
-              Brindamos mantenimiento preventivo y correctivo, montaje y puesta
-              en marcha, contratos de mantenimiento, ATS, subestaciones y
-              sincronismo para plantas eléctricas y grupos electrógenos.
-            </p>
-
-            {/* ✅ SEO local (Costa Caribe) */}
-            <p className="seoText seoLocal">
-              Atención en la Costa Caribe: Barranquilla, Cartagena, Santa Marta,
-              Valledupar, Sincelejo, Montería y ciudades cercanas.
-            </p>
+  Ejecutamos rutinas programadas, contratos de mantenimiento, montaje y puesta en marcha,
+  ATS, subestaciones y sincronismo para sistemas de respaldo y grupos electrógenos.
+  Cobertura en la Costa Caribe: Barranquilla, Cartagena, Santa Marta y otras ciudades de la región.
+</p>
 
             <div className="ctaRow">
               {/* ideal: que abra WhatsApp */}
