@@ -13,15 +13,15 @@ export const BRANDS = [
   "cummins",
   "perkins",
   "cat",
-  "Doosan",
+  "doosan",
   "jhondeere",
   "generac",
   "kohler",
-  "Leroy",
-  "Stamford",
-  "Marathon",
-  "Deepsea",
-  "ComAp",
+  "leroy",
+  "stamford",
+  "marathon",
+  "deepsea",
+  "comap",
 ]
 
 export const CONTACTS_LINKS = {

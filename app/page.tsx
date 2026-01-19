@@ -3,8 +3,6 @@ import Marcas from "./components/Marcas";
 import Navbar from "./components/Navbar";
 import Image from "next/image";
 
-
-
 export default function Home() {
   return (
     <>
@@ -14,18 +12,24 @@ export default function Home() {
         <div className="container heroInner">
           <div className="heroText">
             <p className="kicker">Grupo KeSoluciones</p>
-            <h1>Mantenimiento de plantas eléctricas 24/7 para empresas y propiedad horizontal</h1>
+            <h1>
+              Mantenimiento de plantas eléctricas 24/7 para empresas y propiedad
+              horizontal
+            </h1>
 
             <p className="lead">
-            Mantenimiento preventivo y correctivo, diagnóstico y reparación de plantas eléctricas.
-Venta de repuestos y soporte técnico especializado.
+              Mantenimiento preventivo y correctivo, diagnóstico y reparación de
+              plantas eléctricas. Venta de repuestos y soporte técnico
+              especializado.
             </p>
 
             <p className="seoText">
-  Ejecutamos rutinas programadas, contratos de mantenimiento, montaje y puesta en marcha,
-  ATS, subestaciones y sincronismo para sistemas de respaldo y grupos electrógenos.
-  Cobertura en la Costa Caribe: Barranquilla, Cartagena, Santa Marta y otras ciudades de la región.
-</p>
+              Ejecutamos rutinas programadas, contratos de mantenimiento,
+              montaje y puesta en marcha, Transferencias automáticas (ATS), subestaciones y sincronismo para
+              sistemas de respaldo y grupos electrógenos. Cobertura en la Costa
+              Caribe: Barranquilla, Cartagena, Santa Marta y otras ciudades de
+              la región.
+            </p>
 
             <div className="ctaRow">
               {/* ideal: que abra WhatsApp */}
@@ -129,30 +133,35 @@ Venta de repuestos y soporte técnico especializado.
                 </p>
               </article>
 
-  <article className="card">
-    <div className="cardImg">
-      <Image
-        src="/img/servicios/mantenimiento.jpeg"
-        alt="Contratos de mantenimiento"
-        width={800}
-        height={500}
-      />
-    </div>
-    <h3>Contratos de mantenimiento</h3>
-    <p>Planes mensuales o anuales con atención prioritaria y control.</p>
-  </article>
-  <article className="card">
-    <div className="cardImg">
-      <Image
-        src="/img/servicios/filtros.jpeg"
-        alt="Venta de insumos"
-        width={800}
-        height={500}
-      />
-    </div>
-    <h3>Venta de insumos </h3>
-    <p>Suministro de aceites y filtros compatibles con la marca y modelo del equipo.</p>
-  </article>
+              <article className="card">
+                <div className="cardImg">
+                  <Image
+                    src="/img/servicios/mantenimiento.jpeg"
+                    alt="Contratos de mantenimiento"
+                    width={800}
+                    height={500}
+                  />
+                </div>
+                <h3>Contratos de mantenimiento</h3>
+                <p>
+                  Planes con visitas  mensuales, bimestrales con atención prioritaria.
+                </p>
+              </article>
+              <article className="card">
+                <div className="cardImg">
+                  <Image
+                    src="/img/servicios/filtros.jpeg"
+                    alt="Venta de insumos"
+                    width={800}
+                    height={500}
+                  />
+                </div>
+                <h3>Venta de insumos </h3>
+                <p>
+                  Suministro de aceites y filtros compatibles con la marca y
+                  modelo del equipo.
+                </p>
+              </article>
 
               <article className="card">
                 <div className="cardImg">
@@ -192,7 +201,7 @@ Venta de repuestos y soporte técnico especializado.
                   />
                 </div>
                 <h3>Acometidas eléctricas</h3>
-                <p>Suministro e instalación segura conforme a normas.</p>
+                <p>Seguras y normativas, cumpliendo RETIE y estándares exigidos en Colombia.</p>
               </article>
 
               <article className="card">
@@ -230,85 +239,97 @@ Venta de repuestos y soporte técnico especializado.
             <div className="subSection">
               <h3 className="subTitle">Servicios Complementarios</h3>
 
-      <div className="grid3">
-        <article className="card">
-          <div className="cardImg">
-            <Image
-              src="/img/servicios/insonorizacion.jpeg"
-              alt="Insonorización de plantas y cuartos eléctricos"
-              width={800}
-              height={500}
-            />
-          </div>
-          <h4>Insonorización de plantas y cuartos eléctricos</h4>
-          <p>Reducción de ruido con soluciones profesionales.</p>
-        </article>
+              <div className="grid3">
+                <article className="card">
+                  <div className="cardImg">
+                    <Image
+                      src="/img/servicios/insonorizacion.jpeg"
+                      alt="Insonorización de plantas y cuartos eléctricos"
+                      width={800}
+                      height={500}
+                    />
+                  </div>
+                  <h4>Insonorización de plantas y cuartos eléctricos</h4>
+                  <p>Reducción de ruido con soluciones profesionales.</p>
+                </article>
 
-        <article className="card">
-          <div className="cardImg">
-            <Image
-              src="/img/servicios/tuberia_escape.jpeg"
-              alt="Suministro e instalación de ductos y tuberías de escape"
-              width={800}
-              height={500}
-            />
-          </div>
-          <h4>Suministro e instalación de ductos y tuberías de escape</h4>
-          <p>Sistemas diseñados para cumplir normas ambientales y de seguridad.</p>
-        </article>
+                <article className="card">
+                  <div className="cardImg">
+                    <Image
+                      src="/img/servicios/tuberia_escape.jpeg"
+                      alt="Suministro e instalación de ductos y tuberías de escape"
+                      width={800}
+                      height={500}
+                    />
+                  </div>
+                  <h4>
+                    Suministro e instalación de ductos y tuberías de escape
+                  </h4>
+                  <p>
+                    Sistemas diseñados para cumplir normas ambientales y de
+                    seguridad.
+                  </p>
+                </article>
 
-        <article className="card">
-          <div className="cardImg">
-            <Image
-              src="/img/servicios/tanque1.png"
-              alt="Tanques y sistemas de combustible"
-              width={800}
-              height={500}
-            />
-          </div>
-          <h4>Tanques y sistemas de combustible</h4>
-          <p>Instalación de tanques, tuberías de llenado y spill containers.</p>
-        </article>
-      </div>
-    </div>
+                <article className="card">
+                  <div className="cardImg">
+                    <Image
+                      src="/img/servicios/tanque1.png"
+                      alt="Tanques y sistemas de combustible"
+                      width={800}
+                      height={500}
+                    />
+                  </div>
+                  <h4>Tanques y sistemas de combustible</h4>
+                  <p>
+                    Instalación de tanques, tuberías de llenado y spill
+                    containers.
+                  </p>
+                </article>
+              </div>
+            </div>
 
             {/* ✅ Sub-sección: Servicios de Consultoría */}
             <div className="subSection">
               <h3 className="subTitle">Servicios de Consultoría</h3>
 
-      <div className="grid3">
-        <article className="card">
-          <div className="cardImg">
-            <Image
-              src="/img/servicios/Asesoria.jpg"
-              alt="Asesoría técnica especializada"
-              width={800}
-              height={500}
-            />
-          </div>
-          <h4>Asesoría técnica especializada</h4>
-          <p>Definimos la capacidad adecuada de su planta y la óptima ubicación del equipo.</p>
-        </article>
+              <div className="grid3">
+                <article className="card">
+                  <div className="cardImg">
+                    <Image
+                      src="/img/servicios/Asesoria.jpg"
+                      alt="Asesoría técnica especializada"
+                      width={800}
+                      height={500}
+                    />
+                  </div>
+                  <h4>Asesoría técnica especializada</h4>
+                  <p>
+                    Definimos la capacidad adecuada de su planta y la óptima
+                    ubicación del equipo.
+                  </p>
+                </article>
 
-        <article className="card">
-          <div className="cardImg">
-            <Image
-              src="/img/servicios/capacitacion.png"
-              alt="Capacitación a su personal"
-              width={800}
-              height={500}
-            />
+                <article className="card">
+                  <div className="cardImg">
+                    <Image
+                      src="/img/servicios/capacitacion.png"
+                      alt="Capacitación a su personal"
+                      width={800}
+                      height={500}
+                    />
+                  </div>
+                  <h4>Capacitación a su personal</h4>
+                  <p>
+                    Entrenamos a su equipo en operación básica, seguridad y
+                    primeros diagnósticos, asegurando un uso correcto y
+                    confiable de las plantas eléctricas.
+                  </p>
+                </article>
+              </div>
+            </div>
           </div>
-          <h4>Capacitación a su personal</h4>
-          <p>
-            Entrenamos a su equipo en operación básica, seguridad y primeros diagnósticos,
-            asegurando un uso correcto y confiable de las plantas eléctricas.
-          </p>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
         <section id="marcas" className="section sectionAlt">
           <div className="container">

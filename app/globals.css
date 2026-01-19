@@ -416,3 +416,34 @@ html { scroll-behavior: smooth; }
   opacity: .85;
 }
 
+.ctaBox{
+  margin-top: 28px;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+}
+
+.ctaBoxInner{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.ctaTitle{
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.ctaText{
+  margin: 6px 0 0;
+  opacity: .9;
+  max-width: 720px;
+}
+
+@media (max-width: 600px){
+  .ctaBoxInner{
+    align-items: flex-start;
+  }
+}

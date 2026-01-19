@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
-const WHATSAPP_URL = "https://wa.me/573006447179"; 
+const WHATSAPP_URL = "https://wa.me/573177788997"; 
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -30,6 +31,7 @@ export default function Navbar() {
 
         <div className={`navLinks ${open ? "open" : ""}`}>
           <a href="#servicios" onClick={close}>Servicios</a>
+          <Link className="navLink" href="/blog">Blog</Link>
           <a href="#porque" onClick={close}>Por qué elegirnos</a>
           <a href="#contacto" onClick={close}>Contacto</a>
           <a className="navCta" href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={close}>
