@@ -1,0 +1,17 @@
+.mdxContent {
+  max-width: 720px;
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+.mdxContent h2 {
+  margin-top: 24px;
+}
+
+.mdxContent ul {
+  padding-left: 18px;
+}
+
+.mdxContent p {
+  margin-top: 12px;
+}
