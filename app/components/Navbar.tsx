@@ -33,7 +33,7 @@ export default function Navbar() {
           <a href="#servicios" onClick={close}>Servicios</a>
           <Link className="navLink" href="/blog">Blog</Link>
           <a href="#porque" onClick={close}>Por qué elegirnos</a>
-          <Link href="/contacto" onClick={close}>Contacto</Link>
+          <Link href="#contacto" onClick={close}>Contacto</Link>
           <a className="navCta" href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={close}>
             WhatsApp
           </a>

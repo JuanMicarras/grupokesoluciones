@@ -15,3 +15,17 @@
 .mdxContent p {
   margin-top: 12px;
 }
+
+.postFigure{
+  margin: 18px 0;
+}
+
+.postFigure img{
+  border-radius: 14px;
+}
+
+.postCaption{
+  margin-top: 8px;
+  opacity: .85;
+  font-size: .9rem;
+}

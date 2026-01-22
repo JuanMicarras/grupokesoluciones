@@ -33,6 +33,7 @@ export function getPostBySlug(slug: string) {
     ...(data as {
       title: string;
       date: string;
+      excerpt?: string;
     }),
   };
 }

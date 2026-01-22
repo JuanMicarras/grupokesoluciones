@@ -1,9 +1,11 @@
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
+import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import Marcas from "@/app/components/Marcas";
 import Callout from "@/app/components/Callout";
 import CTA from "@/app/components/CTA";
+import PostImage from "@/app/components/PostImage";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({
@@ -15,6 +17,7 @@ const mdxComponents = {
   Marcas,
   Callout,
   CTA,
+  PostImage,
 };
 
 export default async function BlogPost({
@@ -41,4 +44,18 @@ export default async function BlogPost({
   } catch {
     return notFound();
   }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+
+  return {
+    title: `${post.title} | Grupo KeSoluciones`,
+    description: post.excerpt ?? post.title,
+  };
 }
