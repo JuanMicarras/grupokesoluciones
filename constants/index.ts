@@ -7,6 +7,8 @@ export const CLIENTS = [
   "porto rosso",
   "bruxxel",
   "clubtower",
+  "torredecadiz",
+  "clubtower2",
 ];
 
 export const BRANDS = [
@@ -22,6 +24,7 @@ export const BRANDS = [
   "marathon",
   "deepsea",
   "comap",
+  "smartgen",
 ]
 
 export const CONTACTS_LINKS = {

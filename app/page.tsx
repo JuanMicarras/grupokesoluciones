@@ -342,32 +342,6 @@ export default function Home() {
             </div>
 
             <Marcas />
-
-            {/* <div className="brandsGrid">
-              {[
-                "cummins",
-                "perkins",
-                "cat",
-                "Doosan",
-                "jhondeere",
-                "generac",
-                "kohler",
-                "Leroy",
-                "Stamford",
-                "Marathon",
-                "Deepsea",
-                "ComAp",
-              ].map((brand) => (
-                <div key={brand} className="brandItem">
-                  <Image
-                    src={`/img/marcas/${brand}.png`}
-                    alt={`Marca ${brand}`}
-                    width={300}
-                    height={120}
-                  />
-                </div>
-              ))}
-            </div> */}
           </div>
         </section>
 
@@ -433,27 +407,6 @@ export default function Home() {
 
             <Marcas images={CLIENTS} options="clients" />
 
-            {/* <div className="clientsGrid">
-              {[
-                "juliao",
-                "country",
-                "clinica",
-                "green",
-                "jimenez",
-                "porto rosso",
-                "bruxxel",
-                "clubtower",
-              ].map((client) => (
-                <div key={client} className="clientItem">
-                  <Image
-                    src={`/img/clientes/${client}.png`}
-                    alt={`Cliente ${client}`}
-                    width={300}
-                    height={140}
-                  />
-                </div>
-              ))}
-            </div> */}
           </div>
         </section>
 
