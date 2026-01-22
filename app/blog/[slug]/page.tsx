@@ -26,12 +26,38 @@ export default async function BlogPost({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+
   try {
     const post = getPostBySlug(slug);
 
     return (
       <main className="section">
         <div className="container">
+          {/* ✅ Schema Article */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Article",
+                headline: post.title,
+                datePublished: post.date,
+                author: {
+                  "@type": "Organization",
+                  name: "Grupo KeSoluciones",
+                },
+                publisher: {
+                  "@type": "Organization",
+                  name: "Grupo KeSoluciones",
+                  logo: {
+                    "@type": "ImageObject",
+                    url: "https://grupokesoluciones.com/img/Logo_principal.png",
+                  },
+                },
+              }),
+            }}
+          />
+
           <p style={{ opacity: 0.7 }}>{post.date}</p>
           <h1>{post.title}</h1>
 

@@ -12,8 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
-
 export const metadata = {
   title: "Grupo KeSoluciones | Plantas eléctricas, mantenimiento y consultoría",
   description:
@@ -28,28 +26,9 @@ export const metadata = {
     "servicios eléctricos industriales",
     "repuestos para plantas eléctricas",
     "Acometidas eléctricas",
-    "Sensores"
+    "Sensores",
   ],
-  // openGraph: {
-  //   title: "Grupo KeSoluciones",
-  //   description:
-  //     "Soluciones integrales en plantas eléctricas, mantenimiento y consultoría especializada.",
-  //   url: "https://grupokesoluciones.com",
-  //   siteName: "Grupo KeSoluciones",
-  //   images: [
-  //     {
-  //       url: "/img/og-image.jpg",
-  //       width: 1200,
-  //       height: 630,
-  //       alt: "Grupo KeSoluciones",
-  //     },
-  //   ],
-  //   locale: "es_CO",
-  //   type: "website",
-  // },
 };
-
-
 
 export default function RootLayout({
   children,
@@ -57,10 +36,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Grupo KeSoluciones",
+              description:
+                "Servicios de mantenimiento, montaje, consultoría y soluciones para plantas eléctricas en la Costa Caribe Colombiana.",
+              url: "https://grupokesoluciones.com",
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: "Costa Caribe Colombiana",
+              },
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "CO",
+              },
+              sameAs: ["https://wa.me/573177788997"],
+            }),
+          }}
+        />
+
         {children}
       </body>
     </html>
