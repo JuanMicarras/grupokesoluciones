@@ -1,21 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const WHATSAPP_URL = "https://wa.me/573177788997"; 
+const WHATSAPP_URL = "https://wa.me/573177788997";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const close = () => setOpen(false);
+  // Cierra el menú si cambias el tamaño (ej: giras el cel o pasas a desktop)
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 900) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   return (
     <nav className="nav">
       <div className="container navInner">
-        <a className="brand" href="#top" onClick={close}>
+        <Link className="brand" href="/" onClick={() => setOpen(false)}>
           Grupo KeSoluciones
-        </a>
+        </Link>
 
         <button
           className="burger"
@@ -24,17 +32,29 @@ export default function Navbar() {
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <span />
-          <span />
-          <span />
+          ☰
         </button>
 
         <div className={`navLinks ${open ? "open" : ""}`}>
-          <a href="#servicios" onClick={close}>Servicios</a>
-          <Link className="navLink" href="/blog">Blog</Link>
-          <a href="#porque" onClick={close}>Por qué elegirnos</a>
-          <Link href="#contacto" onClick={close}>Contacto</Link>
-          <a className="navCta" href={WHATSAPP_URL} target="_blank" rel="noreferrer" onClick={close}>
+          <a href="#servicios" onClick={close}>
+            Servicios
+          </a>
+          <Link className="navLink" href="/blog">
+            Blog
+          </Link>
+          <a href="#porque" onClick={close}>
+            Por qué elegirnos
+          </a>
+          <Link href="#contacto" onClick={close}>
+            Contacto
+          </Link>
+          <a
+            className="navCta"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            onClick={close}
+          >
             WhatsApp
           </a>
         </div>

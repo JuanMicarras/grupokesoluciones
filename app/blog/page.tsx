@@ -1,5 +1,6 @@
 import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
 
 
 export default function BlogPage() {
@@ -7,6 +8,7 @@ export default function BlogPage() {
 
   return (
     <main className="section">
+      <Navbar />
       <div className="container">
         <div className="sectionHeader">
           <h1>Blog</h1>
