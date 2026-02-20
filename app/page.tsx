@@ -121,7 +121,7 @@ export default function Home() {
               <article className="card">
                 <div className="cardImg">
                   <Image
-                    src="/img/servicios/correctivo.jpeg"
+                    src="/img/servicios/mantenimiento correctivo.png"
                     alt="Mantenimiento correctivo"
                     width={800}
                     height={500}
@@ -297,7 +297,7 @@ export default function Home() {
                 <article className="card">
                   <div className="cardImg">
                     <Image
-                      src="/img/servicios/Asesoria.jpg"
+                      src="/img/servicios/asesoria_tecnica.png"
                       alt="Asesoría técnica especializada"
                       width={800}
                       height={500}
