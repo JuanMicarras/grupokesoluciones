@@ -1,6 +1,5 @@
 import { CLIENTS, CONTACTS_LINKS } from "@/constants";
-import Marcas from "./components/Marcas";
-import Navbar from "./components/Navbar";
+import BrandsMarquee from "./components/BrandsMarquee";
 import Image from "next/image";
 
 export default function Home() {
@@ -23,10 +22,10 @@ export default function Home() {
 
             <p className="seoText">
               Ejecutamos rutinas programadas, contratos de mantenimiento,
-              montaje y puesta en marcha, Transferencias automáticas (ATS), subestaciones y sincronismo para
-              sistemas de respaldo y grupos electrógenos. Cobertura en la Costa
-              Caribe: Barranquilla, Cartagena, Santa Marta y otras ciudades de
-              la región.
+              montaje y puesta en marcha, Transferencias automáticas (ATS),
+              subestaciones y sincronismo para sistemas de respaldo y grupos
+              electrógenos. Cobertura en la Costa Caribe: Barranquilla,
+              Cartagena, Santa Marta y otras ciudades de la región.
             </p>
 
             <div className="ctaRow">
@@ -142,7 +141,8 @@ export default function Home() {
                 </div>
                 <h3>Contratos de mantenimiento</h3>
                 <p>
-                  Planes con visitas  mensuales, bimestrales con atención prioritaria.
+                  Planes con visitas mensuales, bimestrales con atención
+                  prioritaria.
                 </p>
               </article>
               <article className="card">
@@ -199,7 +199,10 @@ export default function Home() {
                   />
                 </div>
                 <h3>Acometidas eléctricas</h3>
-                <p>Seguras y normativas, cumpliendo RETIE y estándares exigidos en Colombia.</p>
+                <p>
+                  Seguras y normativas, cumpliendo RETIE y estándares exigidos
+                  en Colombia.
+                </p>
               </article>
 
               <article className="card">
@@ -339,7 +342,7 @@ export default function Home() {
               </p>
             </div>
 
-            <Marcas />
+            <BrandsMarquee />
           </div>
         </section>
 
@@ -403,8 +406,7 @@ export default function Home() {
               </p>
             </div>
 
-            <Marcas images={CLIENTS} options="clients" />
-
+            <BrandsMarquee images={CLIENTS} options="clients" />
           </div>
         </section>
 
