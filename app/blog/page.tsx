@@ -8,7 +8,6 @@ export default function BlogPage() {
 
   return (
     <main className="section">
-      <Navbar />
       <div className="container">
         <div className="sectionHeader">
           <h1>Blog</h1>

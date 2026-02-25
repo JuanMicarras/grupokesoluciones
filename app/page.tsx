@@ -6,8 +6,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <header id="top" className="hero">
         <div className="container heroInner">
           <div className="heroText">
@@ -448,15 +446,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="footer">
-        <div className="container footerInner">
-          <p>
-            © {new Date().getFullYear()} Grupo KeSoluciones. Todos los derechos
-            reservados.
-          </p>
-        </div>
-      </footer>
     </>
   );
 }
