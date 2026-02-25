@@ -19,8 +19,8 @@ export default function BrandsMarquee({options = 'brands', images = BRANDS}: Rea
               src={`/img/${options}/${brand}.png`}
               alt={`Marca ${brand}`}
               className={styles.images}
-              width={120}
-              height={120}
+              width={220}
+              height={220}
             />
           </div>
         ))}

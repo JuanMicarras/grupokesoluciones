@@ -1,5 +1,5 @@
 .images {
-    width: 120px;
+    width: 180px;
     height: auto;
     cursor: pointer;
     transition: 0.2s;
@@ -61,5 +61,11 @@
     .track {
       animation: none;
       transform: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .images {
+        width: 120px;
     }
   }

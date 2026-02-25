@@ -36,16 +36,16 @@ export default function Navbar() {
         </button>
 
         <div className={`navLinks ${open ? "open" : ""}`}>
-          <a href="#servicios" onClick={close}>
+          <a href="/#servicios" onClick={close}>
             Servicios
           </a>
           <Link className="navLink" href="/blog">
             Blog
           </Link>
-          <a href="#porque" onClick={close}>
+          <a href="/#porque" onClick={close}>
             Por qué elegirnos
           </a>
-          <Link href="#contacto" onClick={close}>
+          <Link href="/#contacto" onClick={close}>
             Contacto
           </Link>
           <a
