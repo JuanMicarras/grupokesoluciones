@@ -6,7 +6,6 @@ export const CLIENTS = [
   "jimenez",
   "porto rosso",
   "bruxxel",
-  "clubtower",
   "torredecadiz",
   "clubtower2",
 ];
