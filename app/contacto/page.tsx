@@ -23,7 +23,7 @@ export default function ContactoPage() {
   });
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -67,7 +67,11 @@ Mensaje: ${formData.mensaje}
             <h2>Información de contacto</h2>
             <p className="contacto-item">
               📱 <strong>WhatsApp:</strong>{" "}
-              <a href="https://wa.me/573006447179" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://wa.me/573006447179"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 +57 300 6447179
               </a>
             </p>
@@ -75,13 +79,16 @@ Mensaje: ${formData.mensaje}
               Lunes - Viernes | 8 a.m. - 6 p.m; Sábados 8 a.m. - 12 m
             </p>
             <p className="contacto-item">
-              🏢 <strong>Dirección:</strong> Cra 3A # 25-74, Barranquilla - Colombia
+              🏢 <strong>Dirección:</strong> Cra 3A # 25-74, Barranquilla -
+              Colombia
             </p>
             <p className="contacto-item">
               ✉️ <strong>Email:</strong>{" "}
               <a href="mailto:info@grupokes.com">info@grupokes.com</a>
             </p>
-            <p className="contacto-subitem">Asesoría, cotizaciones e información</p>
+            <p className="contacto-subitem">
+              Asesoría, cotizaciones e información
+            </p>
           </section>
 
           {/* Columna derecha: Formulario */}
