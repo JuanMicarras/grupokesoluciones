@@ -1,5 +1,5 @@
 import { CLIENTS, CONTACTS_LINKS } from "@/constants";
-import BrandsMarquee from "./components/BrandsMarquee";
+import BrandsMarquee from "../components/BrandsMarquee";
 import Image from "next/image";
 
 export default function Home() {
@@ -46,10 +46,12 @@ export default function Home() {
           </div>
 
           <div className="heroCard" aria-label="Marca">
-            <img
+            <Image
               className="logoImg"
               src="/img/Logo_principal.png"
               alt="Grupo KeSoluciones"
+              width={20}
+              height={20}
             />
             <p className="heroCardText">
               Continuidad operativa, atención técnica confiable y soluciones a
