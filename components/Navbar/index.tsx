@@ -59,19 +59,19 @@ export default function Navbar() {
             <ul className={styles.links}>
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href}>{link.label}</a>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
           </nav>
 
           <div className={styles.right}>
-            <a href={CONTACTS_LINKS.phone.value} className={styles.phone}>
+            <Link href={CONTACTS_LINKS.phone.value} className={styles.phone}>
               <PhoneIcon />
               {CONTACTS_LINKS.phone.label}
-            </a>
+            </Link>
             <Link href="/#contacto" className={styles.cta}>
-              Contactanos
+              Contáctanos
             </Link>
           </div>
 
@@ -97,24 +97,27 @@ export default function Navbar() {
         <ul className={styles.drawerLinks}>
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} onClick={() => setMenuOpen(false)}>
+              <Link href={link.href} onClick={() => setMenuOpen(false)}>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className={styles.drawerBottom}>
-          <a href={CONTACTS_LINKS.phone.value} className={styles.drawerPhone}>
+          <Link
+            href={CONTACTS_LINKS.phone.value}
+            className={styles.drawerPhone}
+          >
             <PhoneIcon />
             {CONTACTS_LINKS.phone.label}
-          </a>
+          </Link>
           <Link
             href="/#contacto"
             className={styles.drawerCta}
             onClick={() => setMenuOpen(false)}
           >
-            Contactanos
+            Contáctanos
           </Link>
         </div>
       </div>

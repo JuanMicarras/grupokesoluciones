@@ -37,7 +37,7 @@ export const CONTACTS_LINKS = {
     value: "mailto:info@grupokesoluciones.com",
   },
   phone: {
-    label: "300 644 71797",
+    label: "300 644 7179",
     value: "tel:+573006447179",
   },
 } as const;
