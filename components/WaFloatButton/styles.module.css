@@ -8,12 +8,12 @@
   background-color: transparent;
   border-radius: 50%;
   aspect-ratio: 1 / 1;
-  transition: .3s;
+  transition: 0.3s;
   filter: drop-shadow(4px 4px 10px rgba(10, 10, 10, 0.4));
 }
 
 .container:hover {
-  opacity: 0.5;
+  transform: scale(1.1);
 }
 
 .icon {

@@ -9,8 +9,9 @@ export default function WaFloatButton() {
   return (
     <Link
       href={CONTACTS_LINKS.whatsapp.url}
-      target="_blank"
       className={styles.container}
+      target="_blank"
+      rel="noreferrer"
     >
       <IconWhatsApp className={styles.icon} />
     </Link>
