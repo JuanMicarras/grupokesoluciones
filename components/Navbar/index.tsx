@@ -51,7 +51,7 @@ export default function Navbar() {
             </div>
             <div className={styles.logoText}>
               <span className={styles.logoName}>Grupo KeSoluciones</span>
-              <span className={styles.logoTagline}>Manteninimiento</span>
+              <span className={styles.logoTagline}>Mantenimiento</span>
             </div>
           </Link>
 
