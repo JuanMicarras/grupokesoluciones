@@ -33,7 +33,7 @@ export default function Home() {
               {/* ideal: que abra WhatsApp */}
               <Link
                 className="btnPrimary"
-                href="https://wa.me/573177788997?text=Hola,%20quisiera%20cotizar%20servicios/repuestos."
+                href="https://wa.me/573006447179?text=Hola,%20quisiera%20cotizar%20servicios/repuestos."
                 target="_blank"
                 rel="noreferrer"
               >
@@ -430,11 +430,11 @@ export default function Home() {
               </div>
               <div className="infoCard">
                 <p className="label">WhatsApp</p>
-                <p className="value">+57 317 778 8997</p>
+                <p className="value">+57 300 644 7179</p>
               </div>
               <div className="infoCard">
                 <p className="label">Correo</p>
-                <p className="value">info@grupokesoluciones.com</p>
+                <p className="value">info@grupokes.com</p>
               </div>
             </div>
 

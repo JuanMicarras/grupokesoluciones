@@ -13,7 +13,7 @@ export default function CTA({
   title = "¿Necesitas ayuda con tu planta eléctrica?",
   text = "Cotiza mantenimiento, repuestos o una solución a la medida con nuestro equipo técnico.",
   buttonText = "Cotiza por WhatsApp",
-  href = "https://wa.me/573177788997?text=Hola,%20quisiera%20cotizar%20servicios%20para%20plantas%20eléctricas.",
+  href = "https://wa.me/573006447179?text=Hola,%20quisiera%20cotizar%20servicios%20para%20plantas%20eléctricas.",
   variant = "primary",
 }: CTAProps) {
   const btnClass = variant === "primary" ? "btnPrimary" : "btnGhost";
