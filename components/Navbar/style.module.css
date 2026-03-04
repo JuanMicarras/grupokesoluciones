@@ -15,16 +15,24 @@
     box-shadow 0.35s ease;
 }
 
+/* Transparent over hero */
 .blurred {
-  background: var(--surface);
-  backdrop-filter: blur(10px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  background: transparent;
+  backdrop-filter: none;
 }
 
+/* Glass on scroll — light */
 .scrolled {
-  background: var(--surface-scrolled);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px) saturate(180%);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), 0 4px 24px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* Glass on scroll — dark */
+:global([data-theme="dark"]) .scrolled {
+  background: rgba(13, 21, 40, 0.92);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* ─── Inner ──────────────────────────────────────────────── */
@@ -74,22 +82,32 @@
 }
 
 .logoName {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Space Grotesk", "Barlow Condensed", sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: #1a1f30;
+  transition: color 0.35s ease;
+}
+
+:global([data-theme="dark"]) .logoName {
+  color: #ffffff;
 }
 
 .logoTagline {
-  font-family: "Barlow", sans-serif;
+  font-family: "Inter", "Barlow", sans-serif;
   font-size: 0.6rem;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #5d6580;
   margin-top: 1px;
+  transition: color 0.35s ease;
+}
+
+:global([data-theme="dark"]) .logoTagline {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* ─── Nav links ──────────────────────────────────────────── */
@@ -103,22 +121,29 @@
 }
 
 .links a {
-  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--muted);
+  color: #5d6580;
   text-decoration: none;
   padding: 0.4rem 0.75rem;
-  border-radius: 4px;
-  transition:
-    color 0.2s,
-    background 0.2s;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
   white-space: nowrap;
 }
 
+:global([data-theme="dark"]) .links a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .links a:hover {
-  color: var(--ink);
+  color: #1a1f30;
   background: rgba(26, 31, 46, 0.06);
+}
+
+:global([data-theme="dark"]) .links a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* ─── Right side: phone + CTA ────────────────────────────── */
@@ -133,18 +158,23 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--ink);
+  color: #1a1f30;
   text-decoration: none;
   letter-spacing: 0.01em;
+  transition: color 0.35s ease;
+}
+
+:global([data-theme="dark"]) .phone {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .phone svg {
   width: 14px;
   height: 14px;
-  stroke: var(--blue);
+  stroke: #3b82f6;
   fill: none;
   stroke-width: 2.2;
   stroke-linecap: round;
@@ -153,26 +183,25 @@
 }
 
 .cta {
-  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: #fff;
-  background: var(--blue);
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
   border: none;
   padding: 0.5rem 1.1rem;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-  transition:
-    background 0.2s,
-    transform 0.15s;
+  transition: box-shadow 0.2s, transform 0.15s;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.3);
 }
 
 .cta:hover {
-  background: var(--accent-dark);
   transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.45);
 }
 
 .cta:active {
@@ -204,7 +233,7 @@
   display: block;
   height: 1.5px;
   width: 100%;
-  background: var(--ink);
+  background: #1a1f30;
   border-radius: 2px;
   transition:
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -212,13 +241,19 @@
   transform-origin: center;
 }
 
+:global([data-theme="dark"]) .hamburger span {
+  background: #e8eaf0;
+}
+
 .hamburger.open span:nth-child(1) {
   transform: translateY(6.5px) rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
+
 .hamburger.open span:nth-child(3) {
   transform: translateY(-6.5px) rotate(-45deg);
 }
@@ -228,8 +263,8 @@
   position: fixed;
   inset: var(--nav-h) 0 0 0;
   z-index: 99;
-  background: var(--surface-scrolled);
-  backdrop-filter: blur(10px) saturate(180%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px) saturate(180%);
   display: flex;
   flex-direction: column;
   padding: 1.5rem 1.75rem 2.5rem;
@@ -237,9 +272,11 @@
   opacity: 0;
   pointer-events: none;
   transform: translateY(-8px);
-  transition:
-    opacity 0.28s ease,
-    transform 0.28s ease;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+:global([data-theme="dark"]) .drawer {
+  background: rgba(13, 21, 40, 0.95);
 }
 
 .drawer.open {
@@ -262,19 +299,17 @@
 
 .drawerLinks a {
   display: block;
-  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--ink);
+  color: var(--text);
   text-decoration: none;
   padding: 0.9rem 0;
-  transition:
-    color 0.15s,
-    padding-left 0.2s;
+  transition: color 0.15s, padding-left 0.2s;
 }
 
 .drawerLinks a:hover {
-  color: var(--blue);
+  color: #3b82f6;
   padding-left: 0.4rem;
 }
 
@@ -289,17 +324,17 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--text);
   text-decoration: none;
 }
 
 .drawerPhone svg {
   width: 15px;
   height: 15px;
-  stroke: var(--blue);
+  stroke: #3b82f6;
   fill: none;
   stroke-width: 2.2;
   stroke-linecap: round;
@@ -308,24 +343,25 @@
 
 .drawerCta {
   display: block;
-  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
   color: #fff;
-  background: var(--blue);
-  border-radius: 5px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-radius: 8px;
   padding: 0.75rem;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: box-shadow 0.2s;
 }
 
 .drawerCta:hover {
-  background: var(--accent-dark);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
 }
 
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 860px) {
+
   .links,
   .phone,
   .cta {

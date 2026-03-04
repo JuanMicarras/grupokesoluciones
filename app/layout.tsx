@@ -65,6 +65,7 @@ export default function RootLayout({
           }}
         />
         <Navbar />
+        <div className="ambient-glow" />
         {children}
         <Footer />
         <WaFloatButton />

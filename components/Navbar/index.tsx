@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PhoneIcon } from "../icons";
 import { CONTACTS_LINKS } from "@/constants";
+import ThemeToggle from "../ThemeToggle";
 
 const navLinks = [
   { label: "Servicios", href: "/#servicios" },
@@ -73,6 +74,7 @@ export default function Navbar() {
             <Link href="/#contacto" className={styles.cta}>
               Contáctanos
             </Link>
+            <ThemeToggle />
           </div>
 
           <button
@@ -119,6 +121,7 @@ export default function Navbar() {
           >
             Contáctanos
           </Link>
+          <ThemeToggle />
         </div>
       </div>
     </>

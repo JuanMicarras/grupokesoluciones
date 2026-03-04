@@ -2,452 +2,393 @@ import { CLIENTS, CONTACTS_LINKS } from "@/constants";
 import BrandsMarquee from "../components/BrandsMarquee";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollReveal from "../components/ScrollReveal";
+import StatsBar from "../components/StatsBar";
+import { AnimatedHero } from "@/components/ui/animated-hero";
+import {
+  IconBolt,
+  IconWrench,
+  IconFactory,
+  IconStar,
+  IconHandshake,
+  IconPhoneCall,
+  IconShield,
+  IconTarget,
+  IconClipboard,
+  IconRefresh,
+} from "../components/icons/SectionIcons";
 
 export default function Home() {
   return (
     <>
-      <header id="top" className="hero">
-        <div className="container heroInner">
-          <div className="heroText">
-            <p className="kicker">Grupo KeSoluciones</p>
-            <h1>
-              Mantenimiento de plantas eléctricas 24/7 para empresas y propiedad
-              horizontal
-            </h1>
-
-            <p className="lead">
-              Mantenimiento preventivo y correctivo, diagnóstico y reparación de
-              plantas eléctricas. Venta de repuestos y soporte técnico
-              especializado.
-            </p>
-
-            <p className="seoText">
-              Ejecutamos rutinas programadas, contratos de mantenimiento,
-              montaje y puesta en marcha, Transferencias automáticas (ATS),
-              subestaciones y sincronismo para sistemas de respaldo y grupos
-              electrógenos. Cobertura en la Costa Caribe: Barranquilla,
-              Cartagena, Santa Marta y otras ciudades de la región.
-            </p>
-
-            <div className="ctaRow">
-              {/* ideal: que abra WhatsApp */}
-              <Link
-                className="btnPrimary"
-                href="https://wa.me/573006447179?text=Hola,%20quisiera%20cotizar%20servicios/repuestos."
-                target="_blank"
-                rel="noreferrer"
-              >
-                Cotiza por WhatsApp
-              </Link>
-
-              <Link className="btnGhost" href="#servicios">
-                Ver servicios
-              </Link>
-            </div>
-          </div>
-
-          <div className="heroCard" aria-label="Marca">
-            <Image
-              className="logoImg"
-              src="/img/Logo_principal.png"
-              alt="Grupo KeSoluciones"
-              width={20}
-              height={20}
-            />
-            <p className="heroCardText">
-              Continuidad operativa, atención técnica confiable y soluciones a
-              la medida.
-            </p>
-          </div>
-        </div>
-      </header>
+      {/* ═══════════════════════════════════════════
+          HERO
+          ═══════════════════════════════════════════ */}
+      <AnimatedHero />
 
       <main>
+        {/* ─── Clientes & Marcas (Reubicados debajo del hero) ─── */}
+        <section className="border-b border-gray-200 bg-white py-12 dark:border-gray-800 dark:bg-[#070b18]">
+          <div className="container">
+            <ScrollReveal>
+              <div className="mb-6 text-center">
+                <p className="font-medium text-gray-500 text-sm uppercase tracking-wider dark:text-gray-400">
+                  <IconHandshake size={14} className="mr-2 inline-block -translate-y-[2px]" />
+                  Clientes que confían en nosotros
+                </p>
+              </div>
+              <BrandsMarquee images={CLIENTS} options="clients" />
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            SERVICIOS PRINCIPALES
+            ═══════════════════════════════════════════ */}
         <section id="servicios" className="section">
           <div className="container">
-            <div className="sectionHeader">
-              <h2>Servicios</h2>
-              <p>
-                Soluciones integrales para plantas eléctricas, instalación y
-                soporte.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="sectionHeader">
+                <span className="sectionBadge">
+                  <IconWrench size={14} />
+                  Nuestros servicios
+                </span>
+                <h2>Soluciones integrales para plantas eléctricas</h2>
+                <p>
+                  Desde mantenimiento preventivo hasta instalación completa,
+                  cubrimos todas las necesidades de su sistema de respaldo
+                  eléctrico.
+                </p>
+              </div>
+            </ScrollReveal>
 
-            {/* ✅ Servicios principales */}
             <div className="grid3">
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/planta.jpeg"
-                    alt="Venta de plantas eléctricas"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Venta de plantas eléctricas</h3>
-                <p>Suministro de equipos según su necesidad y presupuesto.</p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/montaje_planta.jpeg"
-                    alt="Montaje y puesta en marcha"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Montaje y puesta en marcha</h3>
-                <p>
-                  Instalación, pruebas y arranque seguro de su planta eléctrica.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/preventivo.jpeg"
-                    alt="Mantenimiento preventivo"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Mantenimiento preventivo</h3>
-                <p>
-                  Rutinas programadas para evitar fallas y prolongar vida útil.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/mantenimiento correctivo.png"
-                    alt="Mantenimiento correctivo"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Mantenimiento correctivo</h3>
-                <p>
-                  Diagnóstico y reparación para restablecer operación confiable.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/mantenimiento.jpeg"
-                    alt="Contratos de mantenimiento"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Contratos de mantenimiento</h3>
-                <p>
-                  Planes con visitas mensuales, bimestrales con atención
-                  prioritaria.
-                </p>
-              </article>
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/filtros.jpeg"
-                    alt="Venta de insumos"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Venta de insumos </h3>
-                <p>
-                  Suministro de aceites y filtros compatibles con la marca y
-                  modelo del equipo.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/repuestos.jpeg"
-                    alt="Venta de repuestos "
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Venta de repuestos</h3>
-                <p>
-                  Repuestos confiables para mantener el desempeño del equipo.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/transferencia.jpg"
-                    alt="Transferencias automáticas (ATS)"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Transferencias automáticas (ATS)</h3>
-                <p>Automatización para respaldo eléctrico rápido y seguro.</p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/acometida.jpeg"
-                    alt="Acometidas eléctricas: suministro e instalación segura"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Acometidas eléctricas</h3>
-                <p>
-                  Seguras y normativas, cumpliendo RETIE y estándares exigidos
-                  en Colombia.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/subestacion.jpeg"
-                    alt="Mantenimiento de subestaciones eléctricas"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Mantenimiento de subestaciones eléctricas</h3>
-                <p>
-                  Inspección, pruebas y mantenimiento para operación estable.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/sincronismo.png"
-                    alt="Sistemas de sincronismo para múltiples generadores"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Sistemas de sincronismo</h3>
-                <p>
-                  Sincronización de múltiples generadores para cargas mayores.
-                </p>
-              </article>
+              {[
+                {
+                  img: "/img/servicios/planta.jpeg",
+                  alt: "Venta de plantas eléctricas",
+                  title: "Venta de plantas eléctricas",
+                  desc: "Suministro de equipos según su necesidad y presupuesto.",
+                },
+                {
+                  img: "/img/servicios/montaje_planta.jpeg",
+                  alt: "Montaje y puesta en marcha",
+                  title: "Montaje y puesta en marcha",
+                  desc: "Instalación, pruebas y arranque seguro de su planta eléctrica.",
+                },
+                {
+                  img: "/img/servicios/preventivo.jpeg",
+                  alt: "Mantenimiento preventivo",
+                  title: "Mantenimiento preventivo",
+                  desc: "Rutinas programadas para evitar fallas y prolongar vida útil.",
+                },
+                {
+                  img: "/img/servicios/mantenimiento correctivo.jpg",
+                  alt: "Mantenimiento correctivo",
+                  title: "Mantenimiento correctivo",
+                  desc: "Diagnóstico y reparación para restablecer operación confiable.",
+                },
+                {
+                  img: "/img/servicios/mantenimiento.jpeg",
+                  alt: "Contratos de mantenimiento",
+                  title: "Contratos de mantenimiento",
+                  desc: "Planes con visitas mensuales o bimestrales con atención prioritaria.",
+                },
+                {
+                  img: "/img/servicios/filtros.jpeg",
+                  alt: "Venta de insumos",
+                  title: "Venta de insumos",
+                  desc: "Aceites y filtros compatibles con la marca y modelo del equipo.",
+                },
+                {
+                  img: "/img/servicios/repuestos.jpeg",
+                  alt: "Venta de repuestos",
+                  title: "Venta de repuestos",
+                  desc: "Repuestos confiables para mantener el desempeño del equipo.",
+                },
+                {
+                  img: "/img/servicios/transferencia.jpg",
+                  alt: "Transferencias automáticas (ATS)",
+                  title: "Transferencias automáticas (ATS)",
+                  desc: "Automatización para respaldo eléctrico rápido y seguro.",
+                },
+                {
+                  img: "/img/servicios/acometida.jpeg",
+                  alt: "Acometidas eléctricas",
+                  title: "Acometidas eléctricas",
+                  desc: "Seguras y normativas, cumpliendo RETIE y estándares exigidos.",
+                },
+                {
+                  img: "/img/servicios/subestacion.jpeg",
+                  alt: "Mantenimiento de subestaciones",
+                  title: "Mantenimiento de subestaciones",
+                  desc: "Inspección, pruebas y mantenimiento para operación estable.",
+                },
+                {
+                  img: "/img/servicios/sincronismo.png",
+                  alt: "Sistemas de sincronismo",
+                  title: "Sistemas de sincronismo",
+                  desc: "Sincronización de múltiples generadores para cargas mayores.",
+                },
+              ].map((service, i) => (
+                <ScrollReveal key={service.title} delay={i % 3 * 100}>
+                  <article className="card">
+                    <div className="cardImg">
+                      <Image
+                        src={service.img}
+                        alt={service.alt}
+                        width={800}
+                        height={500}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="cardBody">
+                      <h3>{service.title}</h3>
+                      <p>{service.desc}</p>
+                    </div>
+                  </article>
+                </ScrollReveal>
+              ))}
             </div>
 
-            {/* ✅ Sub-sección: Servicios Complementarios */}
+            {/* ─── Servicios Complementarios ─── */}
             <div className="subSection">
-              <h3 className="subTitle">Servicios Complementarios</h3>
+              <ScrollReveal>
+                <h3 className="subTitle">Servicios Complementarios</h3>
+              </ScrollReveal>
 
               <div className="grid3">
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/insonorizacion.jpeg"
-                      alt="Insonorización de plantas y cuartos eléctricos"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>Insonorización de plantas y cuartos eléctricos</h4>
-                  <p>Reducción de ruido con soluciones profesionales.</p>
-                </article>
-
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/tuberia_escape.jpeg"
-                      alt="Suministro e instalación de ductos y tuberías de escape"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>
-                    Suministro e instalación de ductos y tuberías de escape
-                  </h4>
-                  <p>
-                    Sistemas diseñados para cumplir normas ambientales y de
-                    seguridad.
-                  </p>
-                </article>
-
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/tanque1.png"
-                      alt="Tanques y sistemas de combustible"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>Tanques y sistemas de combustible</h4>
-                  <p>
-                    Instalación de tanques, tuberías de llenado y spill
-                    containers.
-                  </p>
-                </article>
+                {[
+                  {
+                    img: "/img/servicios/insonorizacion.jpeg",
+                    alt: "Insonorización",
+                    title: "Insonorización de plantas y cuartos eléctricos",
+                    desc: "Reducción de ruido con soluciones profesionales.",
+                  },
+                  {
+                    img: "/img/servicios/tuberia_escape.jpeg",
+                    alt: "Ductos y tuberías de escape",
+                    title: "Ductos y tuberías de escape",
+                    desc: "Sistemas diseñados para cumplir normas ambientales y de seguridad.",
+                  },
+                  {
+                    img: "/img/servicios/tanque1.png",
+                    alt: "Tanques y sistemas de combustible",
+                    title: "Tanques y sistemas de combustible",
+                    desc: "Instalación de tanques, tuberías de llenado y spill containers.",
+                  },
+                ].map((service, i) => (
+                  <ScrollReveal key={service.title} delay={i * 100}>
+                    <article className="card">
+                      <div className="cardImg">
+                        <Image
+                          src={service.img}
+                          alt={service.alt}
+                          width={800}
+                          height={500}
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="cardBody">
+                        <h3>{service.title}</h3>
+                        <p>{service.desc}</p>
+                      </div>
+                    </article>
+                  </ScrollReveal>
+                ))}
               </div>
             </div>
 
-            {/* ✅ Sub-sección: Servicios de Consultoría */}
+            {/* ─── Servicios de Consultoría ─── */}
             <div className="subSection">
-              <h3 className="subTitle">Servicios de Consultoría</h3>
+              <ScrollReveal>
+                <h3 className="subTitle">Servicios de Consultoría</h3>
+              </ScrollReveal>
 
               <div className="grid3">
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/asesoria_tecnica.png"
-                      alt="Asesoría técnica especializada"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>Asesoría técnica especializada</h4>
-                  <p>
-                    Definimos la capacidad adecuada de su planta y la óptima
-                    ubicación del equipo.
-                  </p>
-                </article>
-
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/capacitacion.png"
-                      alt="Capacitación a su personal"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>Capacitación a su personal</h4>
-                  <p>
-                    Entrenamos a su equipo en operación básica, seguridad y
-                    primeros diagnósticos, asegurando un uso correcto y
-                    confiable de las plantas eléctricas.
-                  </p>
-                </article>
+                {[
+                  {
+                    img: "/img/servicios/asesoria_tecnica.jpg",
+                    alt: "Asesoría técnica",
+                    title: "Asesoría técnica especializada",
+                    desc: "Definimos la capacidad adecuada de su planta y la óptima ubicación del equipo.",
+                  },
+                  {
+                    img: "/img/servicios/capacitacion.jpg",
+                    alt: "Capacitación",
+                    title: "Capacitación a su personal",
+                    desc: "Entrenamos a su equipo en operación, seguridad y primeros diagnósticos.",
+                  },
+                ].map((service, i) => (
+                  <ScrollReveal key={service.title} delay={i * 100}>
+                    <article className="card">
+                      <div className="cardImg">
+                        <Image
+                          src={service.img}
+                          alt={service.alt}
+                          width={800}
+                          height={500}
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="cardBody">
+                        <h3>{service.title}</h3>
+                        <p>{service.desc}</p>
+                      </div>
+                    </article>
+                  </ScrollReveal>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        <section id="marcas" className="section sectionAlt">
-          <div className="container">
-            <div className="sectionHeader">
-              <h2>Marcas que atendemos</h2>
-              <p>
-                Contamos con experiencia técnica para atender equipos y
-                componentes de las principales marcas del mercado.
-              </p>
-            </div>
-
-            <BrandsMarquee />
-          </div>
-        </section>
-
+        {/* (Marcas reubicadas al hero) */}
+        {/* ═══════════════════════════════════════════
+            POR QUÉ ELEGIRNOS
+            ═══════════════════════════════════════════ */}
         <section id="porque" className="section sectionDark">
           <div className="container">
-            <div className="sectionHeader darkHeader">
-              <h2>¿Por qué elegir Grupo KeSoluciones?</h2>
-              <p>
-                Entendemos la importancia de la continuidad operativa y
-                ofrecemos soluciones técnicas confiables, adaptadas a cada
-                necesidad.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="sectionHeader darkHeader">
+                <span className="sectionBadge">
+                  <IconStar size={14} />
+                  Ventajas competitivas
+                </span>
+                <h2>¿Por qué elegir Grupo KeSoluciones?</h2>
+                <p>
+                  Entendemos la importancia de la continuidad operativa y
+                  ofrecemos soluciones técnicas confiables, adaptadas a cada
+                  necesidad.
+                </p>
+              </div>
+            </ScrollReveal>
 
             <div className="grid4">
-              <div className="miniCard">
-                <h4>Atención técnica especializada</h4>
-                <p>
-                  Personal capacitado para atender cada proyecto con criterio
-                  técnico y precisión.
-                </p>
-              </div>
-              <div className="miniCard">
-                <h4>Respuesta rápida y confiable</h4>
-                <p>
-                  Actuamos de forma oportuna para minimizar tiempos de
-                  inactividad.
-                </p>
-              </div>
-              <div className="miniCard">
-                <h4>Planes a la medida</h4>
-                <p>
-                  Diseñamos soluciones adaptadas a las necesidades de cada
-                  cliente.
-                </p>
-              </div>
-              <div className="miniCard">
-                <h4>Enfoque en continuidad operativa</h4>
-                <p>
-                  Trabajamos para garantizar el funcionamiento constante de sus
-                  equipos.
-                </p>
-              </div>
+              {[
+                {
+                  icon: <IconWrench size={22} />,
+                  title: "Atención técnica especializada",
+                  desc: "Personal capacitado para atender cada proyecto con criterio técnico y precisión.",
+                },
+                {
+                  icon: <IconBolt size={22} />,
+                  title: "Respuesta rápida y confiable",
+                  desc: "Actuamos de forma oportuna para minimizar tiempos de inactividad.",
+                },
+                {
+                  icon: <IconClipboard size={22} />,
+                  title: "Planes a la medida",
+                  desc: "Diseñamos soluciones adaptadas a las necesidades de cada cliente.",
+                },
+                {
+                  icon: <IconRefresh size={22} />,
+                  title: "Enfoque en continuidad operativa",
+                  desc: "Trabajamos para garantizar el funcionamiento constante de sus equipos.",
+                },
+              ].map((item, i) => (
+                <ScrollReveal key={item.title} delay={i * 120}>
+                  <div className="miniCard">
+                    <div className="miniCardIcon">{item.icon}</div>
+                    <h4>{item.title}</h4>
+                    <p>{item.desc}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
 
-            <div className="centerRow">
-              <a className="btnPrimary" href="#contacto">
-                Habla con un asesor
-              </a>
-            </div>
+            <ScrollReveal delay={200}>
+              <div className="centerRow">
+                <a className="btnPrimary" href="#contacto">
+                  Habla con un asesor
+                </a>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
-        <section id="clientes" className="section">
+        {/* ─── Marcas que soportamos ─── */}
+        <section className="border-b border-gray-200 bg-white py-12 dark:border-gray-800 dark:bg-[#070b18]">
           <div className="container">
-            <div className="sectionHeader">
-              <h2>Clientes que confían en nosotros</h2>
-              <p>
-                Hemos acompañado a empresas de distintos sectores con soluciones
-                confiables y a la medida.
-              </p>
-            </div>
-
-            <BrandsMarquee images={CLIENTS} options="clients" />
+            <ScrollReveal>
+              <div className="mb-6 text-center">
+                <p className="font-medium text-gray-500 text-sm uppercase tracking-wider dark:text-gray-400">
+                  <IconFactory size={14} className="mr-2 inline-block -translate-y-[2px]" />
+                  Marcas que soportamos
+                </p>
+              </div>
+              <BrandsMarquee />
+            </ScrollReveal>
           </div>
         </section>
 
-        <section id="contacto" className="section">
-          <div className="container">
-            <div className="sectionHeader">
-              <h2>Contacto</h2>
-              <p>
-                Estamos listos para asesorarte y brindarte la solución que mejor
-                se adapte a tus necesidades.
+        {/* ═══════════════════════════════════════════
+            ENLACE AL BLOG
+            ═══════════════════════════════════════════ */}
+        <section className="section bg-gray-50 dark:bg-[#0a0f1e] border-y border-gray-200 dark:border-gray-800">
+          <div className="container text-center">
+            <ScrollReveal>
+              <h2 className="mb-4 text-3xl font-light text-gray-900 md:text-4xl dark:text-white">
+                Mantente al día con nuestro <span className="font-semibold text-blue-600 dark:text-blue-400">Blog</span>
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl text-gray-600 dark:text-gray-400">
+                Descubre artículos, guías y consejos expertos sobre el mantenimiento, diagnóstico y reparación de plantas eléctricas.
               </p>
-            </div>
+              <div className="flex w-full justify-center mt-6">
+                <Link className="btnPrimary" href="/blog">
+                  Visita nuestro Blog
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            CONTACTO
+            ═══════════════════════════════════════════ */}
+        <section id="contacto" className="section sectionAlt">
+          <div className="container">
+            <ScrollReveal>
+              <div className="sectionHeader">
+                <span className="sectionBadge">
+                  <IconPhoneCall size={14} />
+                  Contáctanos
+                </span>
+                <h2>Estamos listos para ayudarte</h2>
+                <p>
+                  Asesórate con nuestro equipo técnico y encuentra la solución
+                  que mejor se adapte a tus necesidades.
+                </p>
+              </div>
+            </ScrollReveal>
 
             <div className="grid3">
-              <div className="infoCard">
-                <p className="label">Teléfono</p>
-                <p className="value">+57 300 644 7179</p>
-              </div>
-              <div className="infoCard">
-                <p className="label">WhatsApp</p>
-                <p className="value">+57 300 644 7179</p>
-              </div>
-              <div className="infoCard">
-                <p className="label">Correo</p>
-                <p className="value">info@grupokes.com</p>
-              </div>
+              {[
+                { label: "Teléfono", value: "+57 300 644 7179" },
+                { label: "WhatsApp", value: "+57 300 644 7179" },
+                { label: "Correo", value: "info@grupokes.com" },
+              ].map((info, i) => (
+                <ScrollReveal key={info.label} delay={i * 100}>
+                  <div className="infoCard">
+                    <p className="label">{info.label}</p>
+                    <p className="value">{info.value}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
 
-            <div className="centerRow">
-              <Link
-                className="btnDark"
-                href={CONTACTS_LINKS.whatsapp.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Escríbenos por WhatsApp
-              </Link>
-            </div>
+            <ScrollReveal delay={300}>
+              <div className="centerRow">
+                <Link
+                  className="btnPrimary"
+                  href={CONTACTS_LINKS.whatsapp.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Escríbenos por WhatsApp
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       </main>
