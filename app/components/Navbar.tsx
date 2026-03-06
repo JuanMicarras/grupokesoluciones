@@ -3,12 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const WHATSAPP_URL = "https://wa.me/573177788997";
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const close = () => setOpen(false);
+  const handleClose = () => setOpen(false);
   // Cierra el menú si cambias el tamaño (ej: giras el cel o pasas a desktop)
   useEffect(() => {
     const onResize = () => {
@@ -36,27 +34,18 @@ export default function Navbar() {
         </button>
 
         <div className={`navLinks ${open ? "open" : ""}`}>
-          <a href="/#servicios" onClick={close}>
+          <a href="/#servicios" onClick={handleClose}>
             Servicios
           </a>
           <Link className="navLink" href="/blog">
             Blog
           </Link>
-          <a href="/#porque" onClick={close}>
+          <a href="/#porque" onClick={handleClose}>
             Por qué elegirnos
           </a>
-          <Link href="/#contacto" onClick={close}>
+          <Link href="/#contacto" onClick={handleClose}>
             Contacto
           </Link>
-          <a
-            className="navCta"
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-            onClick={close}
-          >
-            WhatsApp
-          </a>
         </div>
       </div>
     </nav>

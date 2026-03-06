@@ -39,7 +39,7 @@
     animation: marquee 22s linear infinite;
     will-change: transform;
   }
-  
+
   .item {
     flex: 0 0 auto;
     display: flex;

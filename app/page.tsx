@@ -423,7 +423,8 @@ export default function Home() {
             <div className="grid3">
               <div className="infoCard">
                 <p className="label">Teléfono</p>
-                <p className="value">+57 300 644 7179</p>
+                {/* <p className="value">+57 300 644 7179</p> */}
+                <a href="tel:+573006447179">300 644 7179</a>
               </div>
               <div className="infoCard">
                 <p className="label">WhatsApp</p>
@@ -431,7 +432,8 @@ export default function Home() {
               </div>
               <div className="infoCard">
                 <p className="label">Correo</p>
-                <p className="value">info@grupokesoluciones.com</p>
+                <a href="mailto:info@grupokesoluciones.com">info@grupokesoluciones.com</a>
+                {/* <p className="value">info@grupokesoluciones.com</p> */}
               </div>
             </div>
 

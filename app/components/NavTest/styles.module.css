@@ -1,0 +1,233 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .nav {
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+  }
+  
+  .brandMark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #111, #666);
+    display: inline-block;
+  }
+  
+  .brandText {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+  
+  .desktopLinks {
+    display: none;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    transition: background 160ms ease, color 160ms ease;
+  }
+  
+  .link:hover {
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.92);
+  }
+  
+  .active {
+    background: rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, 0.95);
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cta {
+    display: none;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #111;
+    color: #fff;
+  }
+  
+  .cta:hover {
+    opacity: 0.92;
+  }
+  
+  .burger {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.6);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .burgerLine {
+    width: 18px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.82);
+    border-radius: 999px;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+  
+  /* animación X */
+  .l1 {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .l2 {
+    opacity: 0;
+  }
+  .l3 {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* Overlay Mobile */
+  .overlay {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 160ms ease;
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .backdrop {
+    position: absolute;
+    inset: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+  }
+  
+  .mobileMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: min(84vw, 360px);
+    background: #fff;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    transform: translateX(110%);
+    transition: transform 220ms ease;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .showMenu {
+    transform: translateX(0);
+  }
+  
+  .mobileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mobileTitle {
+    font-weight: 800;
+    font-size: 14px;
+  }
+  
+  .close {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .mobileLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 4px;
+  }
+  
+  .mobileLink {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.82);
+    font-weight: 700;
+    padding: 12px 12px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.03);
+  }
+  
+  .mobileLink:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+  
+  .mobileActive {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobileCta {
+    margin-top: auto;
+    text-decoration: none;
+    font-weight: 800;
+    text-align: center;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #111;
+    color: #fff;
+  }
+  
+  /* Desktop */
+  @media (min-width: 900px) {
+    .desktopLinks {
+      display: flex;
+    }
+    .cta {
+      display: inline-flex;
+    }
+    .burger {
+      display: none;
+    }
+  }
