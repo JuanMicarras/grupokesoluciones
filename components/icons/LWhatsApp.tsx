@@ -1,7 +1,10 @@
 import type { IconProps } from "@/types/icons.types";
 
-
-export default function LWhatsApp({width = 24, height = 24, ...props}: IconProps) {
+export default function LWhatsApp({
+  width = 24,
+  height = 24,
+  ...props
+}: IconProps) {
   return (
     <svg
       width={width}

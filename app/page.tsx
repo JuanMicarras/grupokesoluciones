@@ -1,6 +1,7 @@
 import { CLIENTS, CONTACTS_LINKS } from "@/constants";
-import BrandsMarquee from "./components/BrandsMarquee";
+import BrandsMarquee from "../components/BrandsMarquee";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,26 +31,28 @@ export default function Home() {
 
             <div className="ctaRow">
               {/* ideal: que abra WhatsApp */}
-              <a
+              <Link
                 className="btnPrimary"
-                href="https://wa.me/573177788997?text=Hola,%20quisiera%20cotizar%20servicios/repuestos."
+                href="https://wa.me/573006447179?text=Hola,%20quisiera%20cotizar%20servicios/repuestos."
                 target="_blank"
                 rel="noreferrer"
               >
                 Cotiza por WhatsApp
-              </a>
+              </Link>
 
-              <a className="btnGhost" href="#servicios">
+              <Link className="btnGhost" href="#servicios">
                 Ver servicios
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="heroCard" aria-label="Marca">
-            <img
+            <Image
               className="logoImg"
               src="/img/Logo_principal.png"
               alt="Grupo KeSoluciones"
+              width={20}
+              height={20}
             />
             <p className="heroCardText">
               Continuidad operativa, atención técnica confiable y soluciones a
@@ -428,24 +431,23 @@ export default function Home() {
               </div>
               <div className="infoCard">
                 <p className="label">WhatsApp</p>
-                <p className="value">+57 317 778 8997</p>
+                <p className="value">+57 300 644 7179</p>
               </div>
               <div className="infoCard">
                 <p className="label">Correo</p>
-                <a href="mailto:info@grupokesoluciones.com">info@grupokesoluciones.com</a>
-                {/* <p className="value">info@grupokesoluciones.com</p> */}
+                <p className="value">info@grupokes.com</p>
               </div>
             </div>
 
             <div className="centerRow">
-              <a
+              <Link
                 className="btnDark"
                 href={CONTACTS_LINKS.whatsapp.url}
                 target="_blank"
                 rel="noreferrer"
               >
                 Escríbenos por WhatsApp
-              </a>
+              </Link>
             </div>
           </div>
         </section>
