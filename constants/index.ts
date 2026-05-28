@@ -26,6 +26,22 @@ export const BRANDS = [
   "smartgen",
 ];
 
+export const MOTORS_VENTAS = [
+  { name: "Cummins", src: "/img/brands/cummins.png" },
+  { name: "HD Hyundai Infracore", src: "/img/brands/hyundai.png" }, 
+  { name: "Perkins", src: "/img/brands/perkins.png" },
+  { name: "Weichai", src: "/img/brands/weichai.png" },
+  { name: "Fawde", src: "/img/brands/fawde.png" },
+  { name: "Rehlko", src: "/img/brands/rehlko.png" }
+];
+
+export const ALTERNATORS_VENTAS = [
+  { name: "Stamford", src: "/img/brands/stamford.png" },
+  { name: "Leroy Somer", src: "/img/brands/leroy.png" },
+  { name: "Marathon", src: "/img/brands/marathon.png" },
+  { name: "Aosif", src: "/img/brands/aosif.png" }
+];
+
 export const CONTACTS_LINKS = {
   whatsapp: {
     label: "WhatsApp",

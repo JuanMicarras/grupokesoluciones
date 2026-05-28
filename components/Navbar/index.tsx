@@ -9,6 +9,7 @@ import { CONTACTS_LINKS } from "@/constants";
 
 const navLinks = [
   { label: "Servicios", href: "/#servicios" },
+  { label: "Ventas", href: "/ventas" },
   { label: "Blog", href: "/blog" },
   { label: "Por qué elegirnos", href: "/#porque" },
   { label: "Contacto", href: "/#contacto" },

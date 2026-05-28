@@ -9,7 +9,7 @@ export default function Home() {
       <header id="top" className="hero">
         <div className="container heroInner">
           <div className="heroText">
-            <p className="kicker">Grupo KeSoluciones</p>
+            <p className="kicker">Grupo KESoluciones</p>
             <h1>
               Mantenimiento de plantas eléctricas 24/7 para empresas y propiedad
               horizontal
@@ -352,7 +352,7 @@ export default function Home() {
         <section id="porque" className="section sectionDark">
           <div className="container">
             <div className="sectionHeader darkHeader">
-              <h2>¿Por qué elegir Grupo KeSoluciones?</h2>
+              <h2>¿Por qué elegir Grupo KESoluciones?</h2>
               <p>
                 Entendemos la importancia de la continuidad operativa y
                 ofrecemos soluciones técnicas confiables, adaptadas a cada

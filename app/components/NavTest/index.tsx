@@ -7,6 +7,7 @@ import styles from "./styles.module.css";
 
 const NAV_LINKS = [
   { href: "/#servicios", label: "Servicios" },
+  { href: "/ventas", label: "Ventas" },
   { href: "/blog", label: "Blog" },
   { href: "/#porque", label: "Por qué elegirnos" },
   { href: "/#marcas", label: "Marcas" },
