@@ -18,7 +18,7 @@ export default function BlogPage() {
               <div className="cardImg">
                 <img src={p.cover} alt={p.title} />
               </div>
-              <h3>{p.title}</h3>
+              <h2>{p.title}</h2>
               <p>{p.excerpt}</p>
               <Link className="btnGhost" href={`/blog/${p.slug}`}>
                 Leer más

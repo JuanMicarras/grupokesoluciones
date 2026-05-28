@@ -13,6 +13,8 @@ export function generateStaticParams() {
   }));
 }
 
+export const dynamicParams = false;
+
 const mdxComponents = {
   BrandsMarquee,
   Callout,
@@ -78,10 +80,24 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
 
-  return {
-    title: `${post.title} | Grupo KeSoluciones`,
-    description: post.excerpt ?? post.title,
-  };
+  try {
+    // 1. Intentamos obtener el post
+    const post = getPostBySlug(slug);
+
+    // 2. Si todo sale bien, devolvemos la data dinámica
+    return {
+      title: `${post.title} | Grupo KeSoluciones`,
+      description: post.excerpt ?? post.title,
+    };
+  } catch (error) {
+    // 3. Si getPostBySlug falla (el post no existe), 
+    // devolvemos metadata genérica de "No encontrado".
+    // Esto evita el Error 500 y permite que Next.js pase al 
+    // componente principal para lanzar el notFound() correctamente.
+    return {
+      title: "Artículo no encontrado | Grupo KeSoluciones",
+      description: "El artículo que buscas no se encuentra disponible.",
+    };
+  }
 }
