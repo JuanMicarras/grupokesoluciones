@@ -30,10 +30,10 @@ export default function Home() {
             </p>
 
             <div className="ctaRow">
-              {/* ideal: que abra WhatsApp */}
+              {/* Ideal: que abra WhatsApp utilizando nuestra constante */}
               <Link
                 className="btnPrimary"
-                href="https://wa.me/573006447179?text=Hola,%20quisiera%20cotizar%20servicios/repuestos."
+                href={CONTACTS_LINKS.whatsapp.url}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -426,16 +426,23 @@ export default function Home() {
             <div className="grid3">
               <div className="infoCard">
                 <p className="label">Teléfono</p>
-                {/* <p className="value">+57 300 644 7179</p> */}
-                <a href="tel:+573006447179">300 644 7179</a>
+                {/* Usamos el value (tel:...) para el href y el label para la vista */}
+                <a href={CONTACTS_LINKS.phone.value}>
+                  {CONTACTS_LINKS.phone.label}
+                </a>
               </div>
+
               <div className="infoCard">
                 <p className="label">WhatsApp</p>
-                <p className="value">+57 300 644 7179</p>
+                <p className="value">{CONTACTS_LINKS.whatsapp.value}</p>
               </div>
+
               <div className="infoCard">
                 <p className="label">Correo</p>
-                <p className="value">info@grupokes.com</p>
+                {/* Convertimos el correo en un enlace cliqueable para mejor UX */}
+                <a className="value" href={CONTACTS_LINKS.email.value}>
+                  {CONTACTS_LINKS.email.label}
+                </a>
               </div>
             </div>
 
