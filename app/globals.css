@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap");
 
+@import "tailwindcss";
+
 :root {
   --dark: #0c1f31;
   --blue: #67acdb;

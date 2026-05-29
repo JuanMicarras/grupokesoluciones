@@ -1,7 +1,14 @@
-import { CLIENTS, CONTACTS_LINKS } from "@/constants";
+import {
+  CLIENTS,
+  COMPLEMENTARY_SERVICES,
+  CONSULTING_SERVICES,
+  CONTACTS_LINKS,
+  SERVICES,
+} from "@/constants";
 import BrandsMarquee from "../components/BrandsMarquee";
 import Image from "next/image";
 import Link from "next/link";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -30,10 +37,10 @@ export default function Home() {
             </p>
 
             <div className="ctaRow">
-              {/* ideal: que abra WhatsApp */}
+              {/* Ideal: que abra WhatsApp utilizando nuestra constante */}
               <Link
                 className="btnPrimary"
-                href="https://wa.me/573006447179?text=Hola,%20quisiera%20cotizar%20servicios/repuestos."
+                href={CONTACTS_LINKS.whatsapp.url}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -75,261 +82,61 @@ export default function Home() {
 
             {/* ✅ Servicios principales */}
             <div className="grid3">
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/planta.jpeg"
-                    alt="Venta de plantas eléctricas"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Venta de plantas eléctricas</h3>
-                <p>Suministro de equipos según su necesidad y presupuesto.</p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/montaje_planta.jpeg"
-                    alt="Montaje y puesta en marcha"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Montaje y puesta en marcha</h3>
-                <p>
-                  Instalación, pruebas y arranque seguro de su planta eléctrica.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/preventivo.jpeg"
-                    alt="Mantenimiento preventivo"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Mantenimiento preventivo</h3>
-                <p>
-                  Rutinas programadas para evitar fallas y prolongar vida útil.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/mantenimiento correctivo.png"
-                    alt="Mantenimiento correctivo"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Mantenimiento correctivo</h3>
-                <p>
-                  Diagnóstico y reparación para restablecer operación confiable.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/mantenimiento.jpeg"
-                    alt="Contratos de mantenimiento"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Contratos de mantenimiento</h3>
-                <p>
-                  Planes con visitas mensuales, bimestrales con atención
-                  prioritaria.
-                </p>
-              </article>
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/filtros.jpeg"
-                    alt="Venta de insumos"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Venta de insumos </h3>
-                <p>
-                  Suministro de aceites y filtros compatibles con la marca y
-                  modelo del equipo.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/repuestos.jpeg"
-                    alt="Venta de repuestos "
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Venta de repuestos</h3>
-                <p>
-                  Repuestos confiables para mantener el desempeño del equipo.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/transferencia.jpg"
-                    alt="Transferencias automáticas (ATS)"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Transferencias automáticas (ATS)</h3>
-                <p>Automatización para respaldo eléctrico rápido y seguro.</p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/acometida.jpeg"
-                    alt="Acometidas eléctricas: suministro e instalación segura"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Acometidas eléctricas</h3>
-                <p>
-                  Seguras y normativas, cumpliendo RETIE y estándares exigidos
-                  en Colombia.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/subestacion.jpeg"
-                    alt="Mantenimiento de subestaciones eléctricas"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Mantenimiento de subestaciones eléctricas</h3>
-                <p>
-                  Inspección, pruebas y mantenimiento para operación estable.
-                </p>
-              </article>
-
-              <article className="card">
-                <div className="cardImg">
-                  <Image
-                    src="/img/servicios/sincronismo.png"
-                    alt="Sistemas de sincronismo para múltiples generadores"
-                    width={800}
-                    height={500}
-                  />
-                </div>
-                <h3>Sistemas de sincronismo</h3>
-                <p>
-                  Sincronización de múltiples generadores para cargas mayores.
-                </p>
-              </article>
+              {SERVICES.map((servicio) => (
+                <article key={servicio.id} className="card">
+                  <div className="cardImg">
+                    <Image
+                      src={servicio.image}
+                      alt={servicio.title}
+                      width={800}
+                      height={500}
+                    />
+                  </div>
+                  <h3>{servicio.title}</h3>
+                  <p>{servicio.description}</p>
+                </article>
+              ))}
             </div>
 
-            {/* ✅ Sub-sección: Servicios Complementarios */}
+            {/* Servicios Complementarios */}
             <div className="subSection">
               <h3 className="subTitle">Servicios Complementarios</h3>
-
               <div className="grid3">
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/insonorizacion.jpeg"
-                      alt="Insonorización de plantas y cuartos eléctricos"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>Insonorización de plantas y cuartos eléctricos</h4>
-                  <p>Reducción de ruido con soluciones profesionales.</p>
-                </article>
-
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/tuberia_escape.jpeg"
-                      alt="Suministro e instalación de ductos y tuberías de escape"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>
-                    Suministro e instalación de ductos y tuberías de escape
-                  </h4>
-                  <p>
-                    Sistemas diseñados para cumplir normas ambientales y de
-                    seguridad.
-                  </p>
-                </article>
-
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/tanque1.png"
-                      alt="Tanques y sistemas de combustible"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>Tanques y sistemas de combustible</h4>
-                  <p>
-                    Instalación de tanques, tuberías de llenado y spill
-                    containers.
-                  </p>
-                </article>
+                {COMPLEMENTARY_SERVICES.map((service) => (
+                  <article className="card" key={service.id}>
+                    <div className="cardImg">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        width={800}
+                        height={500}
+                      />
+                    </div>
+                    <h4>{service.title}</h4>
+                    <p>{service.description}</p>
+                  </article>
+                ))}
               </div>
             </div>
 
-            {/* ✅ Sub-sección: Servicios de Consultoría */}
+            {/* Servicios de Consultoría */}
             <div className="subSection">
               <h3 className="subTitle">Servicios de Consultoría</h3>
-
               <div className="grid3">
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/asesoria_tecnica.png"
-                      alt="Asesoría técnica especializada"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>Asesoría técnica especializada</h4>
-                  <p>
-                    Definimos la capacidad adecuada de su planta y la óptima
-                    ubicación del equipo.
-                  </p>
-                </article>
-
-                <article className="card">
-                  <div className="cardImg">
-                    <Image
-                      src="/img/servicios/capacitacion.png"
-                      alt="Capacitación a su personal"
-                      width={800}
-                      height={500}
-                    />
-                  </div>
-                  <h4>Capacitación a su personal</h4>
-                  <p>
-                    Entrenamos a su equipo en operación básica, seguridad y
-                    primeros diagnósticos, asegurando un uso correcto y
-                    confiable de las plantas eléctricas.
-                  </p>
-                </article>
+                {CONSULTING_SERVICES.map((service) => (
+                  <article className="card" key={service.id}>
+                    <div className="cardImg">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        width={800}
+                        height={500}
+                      />
+                    </div>
+                    <h4>{service.title}</h4>
+                    <p>{service.description}</p>
+                  </article>
+                ))}
               </div>
             </div>
           </div>
@@ -391,10 +198,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="centerRow">
-              <a className="btnPrimary" href="#contacto">
-                Habla con un asesor
-              </a>
+            <div className="centerRow" style={{ marginTop: "40px" }}>
+              <CTA
+                title="¿Listo para asegurar la continuidad de tus operaciones?"
+                text="Nuestros especialistas están disponibles para diseñar un plan a tu medida."
+                buttonText="Habla con un asesor"
+                href="#contacto"
+              />
             </div>
           </div>
         </section>
@@ -426,16 +236,23 @@ export default function Home() {
             <div className="grid3">
               <div className="infoCard">
                 <p className="label">Teléfono</p>
-                {/* <p className="value">+57 300 644 7179</p> */}
-                <a href="tel:+573006447179">300 644 7179</a>
+                {/* Usamos el value (tel:...) para el href y el label para la vista */}
+                <a href={CONTACTS_LINKS.phone.value}>
+                  {CONTACTS_LINKS.phone.label}
+                </a>
               </div>
+
               <div className="infoCard">
                 <p className="label">WhatsApp</p>
-                <p className="value">+57 300 644 7179</p>
+                <p className="value">{CONTACTS_LINKS.whatsapp.value}</p>
               </div>
+
               <div className="infoCard">
                 <p className="label">Correo</p>
-                <p className="value">info@grupokes.com</p>
+                {/* Convertimos el correo en un enlace cliqueable para mejor UX */}
+                <a className="value" href={CONTACTS_LINKS.email.value}>
+                  {CONTACTS_LINKS.email.label}
+                </a>
               </div>
             </div>
 
