@@ -1,5 +1,5 @@
-// components/CTA.tsx
 import Link from "next/link";
+import { CONTACTS_LINKS } from "@/constants"; // ✅ Importamos la constante
 
 type CTAProps = {
   title?: string;
@@ -13,11 +13,10 @@ export default function CTA({
   title = "¿Necesitas ayuda con tu planta eléctrica?",
   text = "Cotiza mantenimiento, repuestos o una solución a la medida con nuestro equipo técnico.",
   buttonText = "Cotiza por WhatsApp",
-  href = "https://wa.me/573006447179?text=Hola,%20quisiera%20cotizar%20servicios%20para%20plantas%20eléctricas.",
+  href = CONTACTS_LINKS.whatsapp.url, 
   variant = "primary",
 }: CTAProps) {
   const btnClass = variant === "primary" ? "btnPrimary" : "btnGhost";
-
   const isExternal = href.startsWith("http");
 
   return (

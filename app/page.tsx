@@ -8,6 +8,7 @@ import {
 import BrandsMarquee from "../components/BrandsMarquee";
 import Image from "next/image";
 import Link from "next/link";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -197,10 +198,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="centerRow">
-              <a className="btnPrimary" href="#contacto">
-                Habla con un asesor
-              </a>
+            <div className="centerRow" style={{ marginTop: "40px" }}>
+              <CTA
+                title="¿Listo para asegurar la continuidad de tus operaciones?"
+                text="Nuestros especialistas están disponibles para diseñar un plan a tu medida."
+                buttonText="Habla con un asesor"
+                href="#contacto"
+              />
             </div>
           </div>
         </section>
