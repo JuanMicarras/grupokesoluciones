@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Blog", href: "/blog" },
   { label: "Por qué elegirnos", href: "/#porque" },
   { label: "Contacto", href: "/#contacto" },
+  { label: "Quiénes somos", href: "/quienes-somos" },
 ];
 
 export default function Navbar() {
