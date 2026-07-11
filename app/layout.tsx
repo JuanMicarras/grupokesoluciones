@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import WaFloatButton from "../components/WaFloatButton";
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +41,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="BEfNy3ThRTcYynm-GY_Tq9Ya_KwKLCjHcaa0C6hjuERU"
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -64,12 +72,18 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* <Navbar /> */}
         <Navbar />
         {children}
         <Footer />
         <WaFloatButton />
       </body>
+      <Script
+        type="text-javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js.hs-scripts.com/51148283.js"
+      ></Script>
     </html>
   );
 }
