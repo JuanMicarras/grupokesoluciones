@@ -58,8 +58,8 @@ export default function Home() {
               className="logoImg"
               src="/img/Logo_principal.png"
               alt="Grupo KeSoluciones"
-              width={20}
-              height={20}
+              width={300}
+              height={300}
             />
             <p className="heroCardText">
               Continuidad operativa, atención técnica confiable y soluciones a
