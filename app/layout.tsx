@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import WaFloatButton from "../components/WaFloatButton";
 import Navbar from "@/components/Navbar";
-import Head from "next/head";
+import WaFloatButton from "../components/WaFloatButton";
+import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +33,9 @@ export const metadata = {
     "Acometidas eléctricas",
     "Sensores",
   ],
+  verification: {
+    google: "BEfNy3ThRTcYynm-GY_Tq9Ya_KwKLCjHcaa0C6hjuERU",
+  },
 };
 
 export default function RootLayout({
@@ -42,12 +45,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="BEfNy3ThRTcYynm-GY_Tq9Ya_KwKLCjHcaa0C6hjuERU"
-        />
-      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -77,15 +74,15 @@ export default function RootLayout({
         {children}
         <Footer />
         <Analytics />
+        <SpeedInsights />
         <WaFloatButton />
+
+        <Script
+          id="hs-script-loader"
+          strategy="afterInteractive"
+          src="//js.hs-scripts.com/51148283.js"
+        />
       </body>
-      <Script
-        type="text-javascript"
-        id="hs-script-loader"
-        async
-        defer
-        src="//js.hs-scripts.com/51148283.js"
-      ></Script>
     </html>
   );
 }
