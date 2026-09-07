@@ -5,6 +5,7 @@ import WaFloatButton from "../components/WaFloatButton";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,6 +76,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
         <WaFloatButton />
       </body>
       <Script
