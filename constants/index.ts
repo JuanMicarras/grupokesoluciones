@@ -45,16 +45,16 @@ export const ALTERNATORS_VENTAS = [
 export const CONTACTS_LINKS = {
   whatsapp: {
     label: "WhatsApp",
-    value: "+57 300 644 7179",
-    url: "https://api.whatsapp.com/send?phone=573006447179&text=Vengo%20desde%20el%20website",
+    value: "+57 317 778 8997",
+    url: "https://api.whatsapp.com/send?phone=573177788997&text=Vengo%20desde%20el%20website",
   },
   email: {
     label: "info@grupokes.com",
     value: "mailto:info@grupokes.com",
   },
   phone: {
-    label: "300 644 7179",
-    value: "tel:+573006447179",
+    label: "317 778 8997",
+    value: "tel:+573177788997",
   },
 } as const;
 

@@ -9,6 +9,7 @@ import BrandsMarquee from "../components/BrandsMarquee";
 import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export default function Home() {
   return (
@@ -223,6 +224,19 @@ export default function Home() {
           </div>
         </section>
 
+        {/* <section id="reseñas" className="section sectionAlt">
+          <div className="container">
+            <div className="sectionHeader">
+              <h2>Reseñas de nuestros clientes</h2>
+              <p>
+                La satisfacción de nuestros clientes es nuestra prioridad. Aquí
+                compartimos algunas de sus experiencias.
+              </p>
+            </div>
+            <GoogleReviews />
+          </div>
+        </section> */}
+
         <section id="contacto" className="section">
           <div className="container">
             <div className="sectionHeader">
@@ -268,6 +282,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        
       </main>
     </>
   );

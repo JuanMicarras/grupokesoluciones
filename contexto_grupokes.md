@@ -21,16 +21,16 @@ export const BRANDS = [
 export const CONTACTS_LINKS = {
   whatsapp: {
     label: "WhatsApp",
-    value: "+57 300 644 7179",
-    url: "https://api.whatsapp.com/send?phone=573006447179&text=Vengo%20desde%20el%20website",
+    value: "+57 317 778 8997",
+    url: "https://api.whatsapp.com/send?phone=573177788997&text=Vengo%20desde%20el%20website",
   },
   email: {
     label: "info@grupokes.com",
     value: "mailto:info@grupokes.com",
   },
   phone: {
-    label: "300 644 7179",
-    value: "tel:+573006447179",
+    label: "317 778 8997",
+    value: "tel:+573177788997",
   },
 } as const;
 \`\`\`
@@ -55,7 +55,7 @@ export default function CTA({
   title = "¿Necesitas ayuda con tu planta eléctrica?",
   text = "Cotiza mantenimiento, repuestos o una solución a la medida con nuestro equipo técnico.",
   buttonText = "Cotiza por WhatsApp",
-  href = "https://wa.me/573006447179?text=Hola,%20quisiera%20cotizar%20servicios%20para%20plantas%20eléctricas.",
+  href = "https://wa.me/573177788997?text=Hola,%20quisiera%20cotizar%20servicios%20para%20plantas%20eléctricas.",
   variant = "primary",
 }: CTAProps) {
   const btnClass = variant === "primary" ? "btnPrimary" : "btnGhost";

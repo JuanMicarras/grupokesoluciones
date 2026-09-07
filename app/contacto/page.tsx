@@ -42,7 +42,7 @@ Sección: ${formData.seccion}
 Mensaje: ${formData.mensaje}
     `;
 
-    const url = `https://wa.me/573006447179?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/573177788997?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 
     // Limpiar formulario
@@ -68,7 +68,7 @@ Mensaje: ${formData.mensaje}
             <p className="contacto-item">
               📱 <strong>WhatsApp:</strong>{" "}
               <a
-                href="https://wa.me/573006447179"
+                href="https://wa.me/573177788997"
                 target="_blank"
                 rel="noopener noreferrer"
               >
