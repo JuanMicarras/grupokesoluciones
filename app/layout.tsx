@@ -68,7 +68,7 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 addressCountry: "CO",
               },
-              sameAs: ["https://wa.me/573006447179"],
+              sameAs: ["https://wa.me/573177788997"],
             }),
           }}
         />

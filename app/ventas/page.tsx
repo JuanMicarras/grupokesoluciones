@@ -185,7 +185,7 @@ export default function VentasPage() {
         title="¿Necesita una planta eléctrica para su empresa o edificio?"
         text="Comuníquese con nosotros vía WhatsApp y reciba asesoría técnica para seleccionar la planta eléctrica adecuada según su consumo y tipo de instalación."
         buttonText="Solicitar Cotización"
-        href="https://wa.me/573006447179?text=Hola,%20estoy%20interesado%20en%20comprar%20una%20planta%20eléctrica%20y%20quisiera%20asesoría."
+        href="https://wa.me/573177788997?text=Hola,%20estoy%20interesado%20en%20comprar%20una%20planta%20eléctrica%20y%20quisiera%20asesoría."
       />
 
     </main>
