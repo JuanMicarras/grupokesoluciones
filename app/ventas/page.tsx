@@ -10,7 +10,7 @@ export default function VentasPage() {
       {/* HERO */}
       <header className="ventas-hero">
         <div className="hero-content">
-          <h1>Venta de Plantas Eléctricas en Barranquilla</h1>
+          <h1>Venta de Plantas Eléctricas en la Region Caribe</h1>
           <p>
             En Grupo KESoluciones ofrecemos suministro e instalación de plantas
             eléctricas diesel para garantizar respaldo energético confiable en
