@@ -48,6 +48,16 @@ export const CONTACTS_LINKS = {
     value: "+57 317 778 8997",
     url: "https://api.whatsapp.com/send?phone=573177788997&text=Vengo%20desde%20el%20website",
   },
+  whatsapp_ventas: {
+    label: "WhatsApp",
+    value: "+57 317 778 8997",
+    url: "https://api.whatsapp.com/send?phone=573177788997&text=%2AHola%2C%20quiero%20cotizar%20una%20Planta%20El%C3%A9ctrica%20Nueva.%2A%0A%2AAdjunto%20mis%20datos%3A%2A%0A%0A-%20%2ANombre%20y%20Empresa%3A%2A%20%0A-%20%2ANIT%2FC%C3%A9dula%3A%2A%20%0A-%20%2ACorreo%20electr%C3%B3nico%3A%2A%20%0A-%20%2APotencia%20requerida%20%28en%20kVA%2FkW%20o%20equipos%20a%20respaldar%29%3A%2A%20%0A-%20%2ACiudad%20donde%20se%20requiere%20el%20equipo%3A%2A%20%0A-%20%2AVoltaje%20de%20salida%3A%2A%20",
+  },
+  whatsapp_mantenimiento: {
+    label: "WhatsApp",
+    value: "+57 317 778 8997",
+    url: "https://api.whatsapp.com/send?phone=573177788997&text=%2AHola%2C%20necesito%20informaci%C3%B3n%20para%20Mantenimiento%20de%20Planta%20El%C3%A9ctrica.%2A%0A%2AAdjunto%20mis%20datos%3A%2A%0A%0A-%20%2ANombre%20y%20Empresa%3A%2A%20%0A-%20%2ANIT%2FC%C3%A9dula%3A%2A%20%0A-%20%2ACorreo%20electr%C3%B3nico%3A%2A%20%0A-%20%2AMarca%20y%20potencia%20de%20la%20planta%20actual%3A%2A%20%0A-%20%2ACiudad%20y%20ubicaci%C3%B3n%20del%20equipo%3A%2A%20%0A-%20%2AMantenimiento%20preventivo%20o%20tipo%20de%20servicio%20solicitado%3F%3A%2A%20",
+  },
   email: {
     label: "info@grupokes.com",
     value: "mailto:info@grupokes.com",

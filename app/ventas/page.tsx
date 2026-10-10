@@ -1,7 +1,7 @@
 import React from "react";
 import "./ventas.css";
 import CTA from "@/components/CTA";
-import { MOTORS_VENTAS, ALTERNATORS_VENTAS } from "@/constants";
+import { MOTORS_VENTAS, ALTERNATORS_VENTAS, CONTACTS_LINKS } from "@/constants";
 import Image from "next/image";
 
 export default function VentasPage() {
@@ -33,6 +33,8 @@ export default function VentasPage() {
             medida.
           </p>
         </div>
+        <CTA title = "¿Necesitas una planta eléctrica?" text = "Haz click en el botón para recibir asesoría técnica y cotización de tu planta eléctrica." 
+         href={CONTACTS_LINKS.whatsapp_ventas.url} variant="green"></CTA>
       </header>
 
       {/* INTRO */}
@@ -190,10 +192,11 @@ export default function VentasPage() {
 
       {/* CTA */}
       <CTA
-        title="¿Necesita una planta eléctrica para su empresa o edificio?"
+        title="¿Necesita una planta eléctrica para su empresa?"
         text="Comuníquese con nosotros vía WhatsApp y reciba asesoría técnica para seleccionar la planta eléctrica adecuada según su consumo y tipo de instalación."
         buttonText="Solicitar Cotización"
-        href="https://wa.me/573177788997?text=Hola,%20estoy%20interesado%20en%20comprar%20una%20planta%20eléctrica%20y%20quisiera%20asesoría."
+        href={CONTACTS_LINKS.whatsapp_ventas.url}
+        
       />
     </main>
   );
