@@ -23,11 +23,14 @@ export default function CTA({
 
   // Función que avisa a Google Ads de la conversión con los datos exactos que te dieron
   const registrarConversion = () => {
-    sendGAEvent('event', 'conversion', {
-      'send_to': 'AW-18465905677/kEPKCNeUp5gdEI24neVE',
-      'value': 1.0,
-      'currency': 'COP'
-    });
+    // Invocación nativa a gtag para asegurar compatibilidad 100% con Google Ads
+    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18465905677/kEPKCNeUp5gdEI24neVE',
+        'value': 1.0,
+        'currency': 'COP'
+      });
+    }
   };
 
   return (
