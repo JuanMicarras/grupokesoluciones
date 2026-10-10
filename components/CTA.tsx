@@ -7,7 +7,7 @@ type CTAProps = {
   text?: string;
   buttonText?: string;
   href?: string;
-  variant?: "primary" | "ghost";
+  variant?: "primary" | "ghost" | "dark" | "green";
 };
 
 export default function CTA({
@@ -17,10 +17,16 @@ export default function CTA({
   href = CONTACTS_LINKS.whatsapp.url,
   variant = "primary",
 }: CTAProps) {
-  const btnClass = variant === "primary" ? "btnPrimary" : "btnGhost";
+  
   const isWhatsApp = href.includes("wa.me") || href.includes("whatsapp.com") || href.includes("api.whatsapp.com");
   const isExternal = href.startsWith("http");
-
+  const variantClasses = {
+    primary: "btnPrimary",
+    ghost: "btnGhost",
+    dark: "btnDark", // Llama a tu variable --dark definida en globals.css
+    green: "btnGreen", // Llama a tu variable --green definida en globals.css
+  };
+  const btnClass = variantClasses[variant] || "btnPrimary";
 
   return (
     <aside className="ctaBox" role="complementary" aria-label="Llamado a la acción">
