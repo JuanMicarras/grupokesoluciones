@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { CONTACTS_LINKS } from "@/constants";
+import { sendGAEvent } from '@next/third-parties/google';
 
 type CTAProps = {
   title?: string;
@@ -18,6 +20,18 @@ export default function CTA({
 }: CTAProps) {
   const btnClass = variant === "primary" ? "btnPrimary" : "btnGhost";
   const isExternal = href.startsWith("http");
+
+  // Función que avisa a Google Ads de la conversión con los datos exactos que te dieron
+  const registrarConversion = () => {
+    // Invocación nativa a gtag para asegurar compatibilidad 100% con Google Ads
+    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18465905677/kEPKCNeUp5gdEI24neVE',
+        'value': 1.0,
+        'currency': 'COP'
+      });
+    }
+  };
 
   return (
     <aside className="ctaBox" role="complementary" aria-label="Llamado a la acción">
@@ -43,11 +57,11 @@ export default function CTA({
         */}
         <div className="w-full md:w-auto flex justify-center md:justify-end shrink-0">
           {isExternal ? (
-            <a className={btnClass} href={href} target="_blank" rel="noreferrer">
+            <a className={btnClass} href={href} target="_blank" rel="noreferrer" onClick={registrarConversion}>
               {buttonText}
             </a>
           ) : (
-            <Link className={btnClass} href={href}>
+            <Link className={btnClass} href={href} onClick={registrarConversion}>
               {buttonText}
             </Link>
           )}

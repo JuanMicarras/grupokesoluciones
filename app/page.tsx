@@ -224,7 +224,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section id="reseñas" className="section sectionAlt">
+        <section id="reseñas" className="section sectionAlt">
           <div className="container">
             <div className="sectionHeader">
               <h2>Reseñas de nuestros clientes</h2>
@@ -235,7 +235,7 @@ export default function Home() {
             </div>
             <GoogleReviews />
           </div>
-        </section> */}
+        </section>
 
         <section id="contacto" className="section">
           <div className="container">
