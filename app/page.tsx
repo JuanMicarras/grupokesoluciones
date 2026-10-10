@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
 import GoogleReviews from "@/components/GoogleReviews";
+import TrackedWhatsAppLink from "@/components/TrackedWhatsAppLink";
 
 export default function Home() {
   return (
@@ -38,15 +39,12 @@ export default function Home() {
             </p>
 
             <div className="ctaRow">
-              {/* Ideal: que abra WhatsApp utilizando nuestra constante */}
-              <Link
+              <TrackedWhatsAppLink
                 className="btnPrimary"
                 href={CONTACTS_LINKS.whatsapp.url}
-                target="_blank"
-                rel="noreferrer"
               >
                 Cotiza por WhatsApp
-              </Link>
+              </TrackedWhatsAppLink>
 
               <Link className="btnGhost" href="#servicios">
                 Ver servicios
@@ -271,19 +269,15 @@ export default function Home() {
             </div>
 
             <div className="centerRow">
-              <Link
+              <TrackedWhatsAppLink
                 className="btnDark"
                 href={CONTACTS_LINKS.whatsapp.url}
-                target="_blank"
-                rel="noreferrer"
               >
                 Escríbenos por WhatsApp
-              </Link>
+              </TrackedWhatsAppLink>
             </div>
           </div>
         </section>
-
-        
       </main>
     </>
   );
