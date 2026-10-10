@@ -15,7 +15,8 @@ export default async function GoogleReviews() {
 
   // URL para el perfil de Google Maps (el botón que pidió tu papá)
   // Reemplaza esto con el link directo a dejar una reseña o ver el perfil en Maps
-  const googleMapsUrl = `https://search.google.com/local/writereview?placeid=${placeId}`;
+  // const googleMapsUrl = `https://search.google.com/local/?placeid=${placeId}`;
+  const googleMapsUrl = 'https://www.google.com/search?hl=es-419&gl=co&q=KESoluciones+SAS,+club+tower+2,+Av.+Tajamares+%2325-74,+Sabanilla+Montecarmelo,+Barranquilla,+Atl%C3%A1ntico&ludocid=6586363597078351891&lsig=AB86z5UK1unGvcZgS4DBJfR-hAk-#lrd='
 
   try {
     const res = await fetch(
